@@ -1,0 +1,9 @@
+{
+  "name": "papayastock",
+  "version": "1.0.0",
+  "description": "This first page",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "start": "node ./built/app.js"
+  
