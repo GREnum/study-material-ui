@@ -6,4 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "node ./built/app.js"
-  
+  },
+  "author": "vasaeps3",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/request-promise": "^4.1.39",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gul
