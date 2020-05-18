@@ -42,4 +42,9 @@
     "passport-jwt": "^3.0.1",
     "pg": "^7.3.0",
     "reflect-metadata": "^0.1.10",
-    "reque
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "rxjs": "^5.5.2",
+    "typeorm": "0.1.1"
+  }
+}
