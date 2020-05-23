@@ -9,4 +9,8 @@ import { DatabaseModule } from "../modules/database/database.module";
 
 @Module({
     modules: [SettingModule],
-    compon
+    components: [CommonService, { provide: SettingService }],
+    exports: [CommonService]
+})
+export class CommonModule {
+}
