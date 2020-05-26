@@ -8,4 +8,12 @@ let opts: StrategyOptions = {
     secretOrKey: "stockpapaya",
 };
 
-passport
+passport.use(new JwtStrategy(opts, function (jwtpayload, done) {
+    console.log("passport.use!");
+    done(null, jwtpayload);
+}));
+
+@Middleware()
+export class AuthorizeMiddleware implements NestMiddleware {
+    public resolve(): (req, res, next) => void {
+        console.log("passport.authent
