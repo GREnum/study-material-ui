@@ -16,4 +16,7 @@ passport.use(new JwtStrategy(opts, function (jwtpayload, done) {
 @Middleware()
 export class AuthorizeMiddleware implements NestMiddleware {
     public resolve(): (req, res, next) => void {
-        console.log("passport.authent
+        console.log("passport.authenticate");
+        return passport.authenticate("jwt", { assignProperty: "token" });
+    }
+}
