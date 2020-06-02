@@ -8,4 +8,15 @@ import { ProductModule } from "../product/product.module";
 import { SettingModule } from "../setting/setting.module";
 import { CommonModule } from "../../common/common.module";
 import { CounterpartyModule } from "../counterparty/counterparty.module";
-// import { AuthServ
+// import { AuthService } from "../auth/auth.service";
+// import { CategoryModule } from "../categories/category.module";
+
+
+@Module({
+    modules: [
+        UserModule,
+        CounterpartyModule,
+        OrderModule,
+        ProductModule,
+        SettingModule,
+        Co
