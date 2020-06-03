@@ -5,4 +5,12 @@ import { CounterpartyService } from "./counterparty.service";
 
 
 @Controller("counterparty")
-export class C
+export class CounterpartyController {
+    constructor(private _counterService: CounterpartyService) {
+
+    }
+
+    @Get()
+    public async getAll( @Res() res: Response, @Body() boies: any) {
+        let counter = await this._counterService.getAll();
+        res.statu
