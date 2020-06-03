@@ -19,4 +19,7 @@ import { CounterpartyModule } from "../counterparty/counterparty.module";
         OrderModule,
         ProductModule,
         SettingModule,
-        Co
+        CommonModule
+    ],
+})
+export class ApplicationModule { }
