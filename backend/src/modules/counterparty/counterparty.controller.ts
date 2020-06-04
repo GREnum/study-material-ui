@@ -13,4 +13,6 @@ export class CounterpartyController {
     @Get()
     public async getAll( @Res() res: Response, @Body() boies: any) {
         let counter = await this._counterService.getAll();
-        res.statu
+        res.status(HttpStatus.OK).json(counter);
+    }
+}
