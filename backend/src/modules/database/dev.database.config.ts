@@ -10,4 +10,13 @@ import { DatabaseConfig } from "./database.config";
 @Component()
 export class DevDatabaseConfig extends DatabaseConfig {
     public getConfiguration(): ConnectionOptions {
-        consol
+        console.log(1212);
+
+        // // entities: [__dirname + "/entity/*"],
+        return {
+            type: "postgres",
+            host: "localhost",
+            port: 5432,
+            username: "postgres",
+            password: "root",
+            database: "papayas
