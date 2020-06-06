@@ -27,4 +27,11 @@ export class DevDatabaseConfig extends DatabaseConfig {
                 path.join(__dirname, "..", "..", "migrations", "*{.js,.ts}")
             ],
             cli: {
-    
+                "migrationsDir": "migrations"
+            },
+            synchronize: true,
+            logger: "advanced-console",
+            logging: "all",
+        };
+    }
+}
