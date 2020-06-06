@@ -19,4 +19,12 @@ export class DevDatabaseConfig extends DatabaseConfig {
             port: 5432,
             username: "postgres",
             password: "root",
-            database: "papayas
+            database: "papayastock",
+            entities: [
+                path.join(__dirname, "..", "**", "*{entity.js,entity.ts}")
+            ],
+            migrations: [
+                path.join(__dirname, "..", "..", "migrations", "*{.js,.ts}")
+            ],
+            cli: {
+    
