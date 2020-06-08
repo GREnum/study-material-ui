@@ -95,3 +95,85 @@ export class OrderController {
         });
         res.status(HttpStatus.OK).json(orders);
     }
+
+    @Post()
+    public async createOrder( @Req() req: Request, @Res() res: Response, @Body() body: any) {
+        let products: Array<IProduct> = body.products;
+        let agentId = req["token"].stockId || null;
+        if (req["token"].isAdmin) {
+            agentId = body.agentId || null;
+        }
+        let user: User = await this._userService.getUserByStockId(agentId);
+        let currencyId: string = user.currencyId;
+        let organizationId = await this._orderService.getOrganizationId();
+        let lastOrder = await this._orderService.getLastOrder();
+        let descriptionOrder = await this._settingService.getOnly("orderComment");
+        let lastOrderNum: number = 0;
+        let newOrderNum: string;
+        if (lastOrder.length) {
+            lastOrderNum = +lastOrder[0].name + 1;
+            newOrderNum = (Array(5).join("0") + lastOrderNum + "").slice(-5);
+        }
+        let newOrderBody = {
+            "name": newOrderNum,
+            "organization": {
+                "meta": {
+                    "href": "https://online.moysklad.ru/api/remap/1.1/entity/organization/" + organizationId,
+                    "type": "organization",
+                    "mediaType": "application/json"
+                }
+            },
+            "agent": {
+                "meta": {
+                    "href": "https://online.moysklad.ru/api/remap/1.1/entity/counterparty/" + agentId,
+                    "type": "counterparty",
+                    "mediaType": "application/json"
+                }
+            },
+            "rate": {
+                "currency": {
+                    "meta": {
+                        "href": "https://online.moysklad.ru/api/remap/1.1/entity/currency/" + currencyId,
+                        "metadataHref": "https://online.moysklad.ru/api/remap/1.1/entity/currency/metadata",
+                        "type": "currency",
+                        "mediaType": "application/json"
+                    }
+                }
+            },
+            "description": descriptionOrder && descriptionOrder.value || null,
+            "positions": []
+        };
+        let currencyStock = await this._orderService.getCurrencyById(currencyId);
+        _.each(products, function (product) {
+            _.each(product.positions, function (position) {
+                if (position.quantity > 0) {
+                    let positionOrder = {
+                        "quantity": position.quantity,
+                        "price": req["token"].isAdmin ? product.salePrice * currencyStock.rate * 100 : product.salePrice * 100,
+                        "assortment": {
+                            "meta": {
+                                "href": "https://online.moysklad.ru/api/remap/1.1/entity/variant/" + position.id,
+                                "type": "variant",
+                                "mediaType": "application/json"
+                            }
+                        },
+                        "reserve": position.quantity
+                    };
+                    newOrderBody.positions.push(positionOrder);
+                }
+            });
+        });
+        let newOrder = await this._orderService.createOrder(newOrderBody);
+        res.status(HttpStatus.OK).json({ "id": newOrder.id });
+    }
+
+    private loadImages(products: IProduct[]) {
+        let _orderService = this._orderService;
+        return bluebird.Promise.map(products, function (product) {
+            return _orderService.loadImage(product);
+        }).then(function (result) {
+            return result;
+        });
+    }
+
+}
