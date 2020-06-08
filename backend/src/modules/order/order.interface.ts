@@ -8,4 +8,18 @@ export interface IStockOrder {
     name: string;
     description?: string;
     sum: number;
-    r
+    reservedSum: number;
+    state: {
+        name: string;
+        color: number;
+    };
+    updated: Date;
+    created: Date;
+    rate: {
+        currency: {
+            meta: {
+                href: string;
+            },
+            name: string;
+        }
+    
