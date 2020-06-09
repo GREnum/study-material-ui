@@ -38,4 +38,7 @@ export interface IOrder {
     };
     updated?: Date;
     created?: Date;
- 
+    products?: IProduct[];
+    currencyCode?: string;
+    currencyId?: string;
+}
