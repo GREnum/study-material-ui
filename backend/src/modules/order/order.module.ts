@@ -2,4 +2,8 @@ import { MiddlewaresConsumer, Module } from "@nestjs/common";
 
 import { OrderService } from "./order.service";
 import { OrderController } from "./order.controller";
-import { 
+import { LoggingMiddleware } from "../../middleware/logging.middleware";
+import { AuthorizeMiddleware } from "../../middleware/authorize.middleware";
+import { SettingService } from "../setting/setting.service";
+import { SettingModule } from "../setting/setting.module";
+import { Comm
