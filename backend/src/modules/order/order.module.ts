@@ -15,4 +15,16 @@ import { UserService } from "../user/user.service";
 @Module({
     modules: [
         UserModule,
-        
+        SettingModule,
+        CommonModule
+    ],
+    controllers: [OrderController],
+    components: [
+        OrderService,
+        {
+            provide: [
+                UserService,
+                SettingService,
+                CommonService
+            ]
+    
