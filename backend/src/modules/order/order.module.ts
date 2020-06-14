@@ -27,4 +27,16 @@ import { UserService } from "../user/user.service";
                 SettingService,
                 CommonService
             ]
-    
+        }
+    ]
+})
+export class OrderModule {
+    public configure(consumer: MiddlewaresConsumer) {
+        consumer
+            .apply(AuthorizeMiddleware)
+            .forRoutes(OrderController)
+            .apply(LoggingMiddleware)
+            .forRoutes(OrderController);
+    }
+}
+
