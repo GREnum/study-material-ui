@@ -174,3 +174,5 @@ export class ProductController {
         });
         return str;
     }
+
+}
