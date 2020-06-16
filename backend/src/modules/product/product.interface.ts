@@ -9,4 +9,21 @@ export interface IProduct {
     quantityStock?: number;
     description?: string;
     positions?: IPosition[];
-    codeCurrency?: string
+    codeCurrency?: string;
+}
+
+export interface IPosition {
+    id: string;
+    stock?: number;
+    salePrice?: number;
+    size?: number;
+    quantity?: number;
+}
+export interface IStockEntity {
+    meta: {
+        href: string;
+    };
+    image?: {
+        meta?: {
+            href: string;
+        
