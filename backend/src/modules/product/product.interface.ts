@@ -26,4 +26,13 @@ export interface IStockEntity {
     image?: {
         meta?: {
             href: string;
-        
+        },
+        miniature?: {
+            href: string;
+        }
+    };
+    name?: string;
+    article?: string;
+    quantity?: number;
+    salePrice?: number;
+}
