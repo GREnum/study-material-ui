@@ -9,4 +9,18 @@ import { AuthorizeMiddleware } from "../../middleware/authorize.middleware";
 import { SettingModule } from "../setting/setting.module";
 import { SettingService } from "../setting/setting.service";
 import { UserService } from "../user/user.service";
-import { User
+import { UserModule } from "../user/user.module";
+
+
+@Module({
+    modules: [
+        UserModule,
+        SettingModule,
+        CommonModule
+    ],
+    controllers: [ProductController],
+    components: [
+        ProductService,
+        {
+            provide: [
+          
