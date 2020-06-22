@@ -33,4 +33,9 @@ import { UserModule } from "../user/user.module";
 export class ProductModule {
     public configure(consumer: MiddlewaresConsumer) {
         consumer
-            .apply(AuthorizeMiddlewar
+            .apply(AuthorizeMiddleware)
+            .forRoutes(ProductController)
+            .apply(LoggingMiddleware)
+            .forRoutes(ProductController);
+    }
+}
