@@ -23,4 +23,14 @@ import { UserModule } from "../user/user.module";
         ProductService,
         {
             provide: [
-          
+                UserService,
+                SettingService,
+                CommonService
+            ]
+        }
+    ]
+})
+export class ProductModule {
+    public configure(consumer: MiddlewaresConsumer) {
+        consumer
+            .apply(AuthorizeMiddlewar
