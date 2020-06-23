@@ -10,4 +10,10 @@ import { CommonService } from "../../common/common.service";
 export class ProductService {
 
     constructor(
-        private _commonServ
+        private _commonServise: CommonService
+    ) { }
+
+    public async loadDesc(product: IProduct) {
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/entity/product/" + product.id;
+        let newProduct: IProduct = JSON.parse(await
