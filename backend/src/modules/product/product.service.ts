@@ -16,4 +16,12 @@ export class ProductService {
     public async loadDesc(product: IProduct) {
         let options = _.cloneDeep(await this._commonServise.getOptions());
         options.uri += "/entity/product/" + product.id;
-        let newProduct: IProduct = JSON.parse(await
+        let newProduct: IProduct = JSON.parse(await request(options));
+        product.description = newProduct.description || null;
+        return product;
+    }
+
+    public async loadImage(product: IProduct) {
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        if (!product.image) {
+            return Promise
