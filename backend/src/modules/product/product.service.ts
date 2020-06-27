@@ -24,4 +24,12 @@ export class ProductService {
     public async loadImage(product: IProduct) {
         let options = _.cloneDeep(await this._commonServise.getOptions());
         if (!product.image) {
-            return Promise
+            return Promise.resolve(product);
+        }
+        options.uri = product.image;
+        options.followRedirect = false;
+        return await request(options)
+            .catch(err => {
+                product.image = err.response.headers.location;
+                return product;
+    
