@@ -32,4 +32,10 @@ export class ProductService {
             .catch(err => {
                 product.image = err.response.headers.location;
                 return product;
-    
+            });
+    }
+
+    public async getStockAllProduct(limit?: number, offset?: number, search?: string, folderId?: string) {
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        let limitStr = "";
+        let folderStr = folder
