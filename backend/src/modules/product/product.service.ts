@@ -38,4 +38,11 @@ export class ProductService {
     public async getStockAllProduct(limit?: number, offset?: number, search?: string, folderId?: string) {
         let options = _.cloneDeep(await this._commonServise.getOptions());
         let limitStr = "";
-        let folderStr = folder
+        let folderStr = folderId && "&productFolder.id=" + folderId || "";
+        if (limit) {
+            limitStr = "&limit=" + limit + "&offset=" + offset;
+        }
+        if (search) {
+            limitStr += "&search=" + encodeURI(search);
+        }
+        options.uri += "/report/st
