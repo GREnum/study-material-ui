@@ -45,4 +45,10 @@ export class ProductService {
         if (search) {
             limitStr += "&search=" + encodeURI(search);
         }
-        options.uri += "/report/st
+        options.uri += "/report/stock/all?groupBy=product&stockMode=all" + folderStr + limitStr;
+        console.log(options.uri);
+        return JSON.parse(await request(options)).rows;
+    }
+
+    public async getProductsById(str: string) {
+        let options = _.cloneDeep(await this._commonServi
