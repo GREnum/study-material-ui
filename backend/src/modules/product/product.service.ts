@@ -57,4 +57,10 @@ export class ProductService {
     }
 
     public async getStockProductById(productId: string) {
-        let options = _.cloneDeep(await this._commonS
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/report/stock/all?groupBy=product&product.id=" + productId;
+        return JSON.parse(await request(options)).rows;
+    }
+
+    public async getStockAllVariants(str: string) {
+        let options = _.clone
