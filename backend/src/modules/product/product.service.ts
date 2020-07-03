@@ -63,4 +63,10 @@ export class ProductService {
     }
 
     public async getStockAllVariants(str: string) {
-        let options = _.clone
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/report/stock/all?stockMode=all&groupBy=variant&includeRelated=true" + str;
+        console.log(options.uri);
+        return JSON.parse(await request(options)).rows;
+    }
+
+    public async get
