@@ -69,4 +69,9 @@ export class ProductService {
         return JSON.parse(await request(options)).rows;
     }
 
-    public async get
+    public async getAll() {
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/report/stock/all";
+        let products = JSON.parse(await request(options));
+        _.each(products.rows, function (product: any) {
+            c
