@@ -74,4 +74,11 @@ export class ProductService {
         options.uri += "/report/stock/all";
         let products = JSON.parse(await request(options));
         _.each(products.rows, function (product: any) {
-            c
+            console.log(product.article);
+        });
+        return products.rows;
+    }
+
+    public async getDefaultCurrency() {
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/entity/currency?filter=default=true"
