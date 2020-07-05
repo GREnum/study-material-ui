@@ -88,4 +88,7 @@ export class ProductService {
     public async getCurrencyById(id: string) {
         let options = _.cloneDeep(await this._commonServise.getOptions());
         options.uri += "/entity/currency/" + id;
-        return JSON.parse(await re
+        return JSON.parse(await request(options));
+    }
+
+}
