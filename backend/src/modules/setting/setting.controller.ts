@@ -15,4 +15,11 @@ export class SettingController {
 
     @Get("get")
     public async getOnly( @Req() req: Request, @Res() res: Response, @Query() query?: any) {
-        let 
+        let settingCode = query.setting;
+        let settingValue = await this._settingService.getOnly(settingCode);
+        res.status(HttpStatus.OK).json(settingValue);
+    }
+
+    @Get()
+    public async getAll( @Req() req: Request, @Res() res: Response) {
+        let s
