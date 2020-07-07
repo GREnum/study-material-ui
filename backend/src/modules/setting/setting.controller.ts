@@ -22,4 +22,7 @@ export class SettingController {
 
     @Get()
     public async getAll( @Req() req: Request, @Res() res: Response) {
-        let s
+        let settings: Setting[] = await this._settingService.getSetting();
+        let foldersStock = await this._settingService.getProductsFolder();
+        let folders = _.map(foldersStock, (f) => { return _.pick(f, ["id", "name"]); });
+        res.status(HttpSta
