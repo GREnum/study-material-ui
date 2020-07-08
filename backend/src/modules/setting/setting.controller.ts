@@ -25,4 +25,10 @@ export class SettingController {
         let settings: Setting[] = await this._settingService.getSetting();
         let foldersStock = await this._settingService.getProductsFolder();
         let folders = _.map(foldersStock, (f) => { return _.pick(f, ["id", "name"]); });
-        res.status(HttpSta
+        res.status(HttpStatus.OK).json({ settings: settings, folders: folders });
+    }
+
+    @Post()
+    public async create( @Res() res: Response, @Body() settings: Setting[]) {
+        let newSettings: Setting[] = await this._settingService.setSetting(settings);
+        res.status(HttpStatus.OK).js
