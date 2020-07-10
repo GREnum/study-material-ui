@@ -6,4 +6,10 @@ import { EntityBase } from "../../common/base.entity";
 @Entity()
 export class Setting extends EntityBase {
 
-    @Column({ unique: true 
+    @Column({ unique: true })
+    public code: string;
+
+    @Column({ nullable: true })
+    public value: string;
+
+}
