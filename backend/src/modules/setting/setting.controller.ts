@@ -31,4 +31,7 @@ export class SettingController {
     @Post()
     public async create( @Res() res: Response, @Body() settings: Setting[]) {
         let newSettings: Setting[] = await this._settingService.setSetting(settings);
-        res.status(HttpStatus.OK).js
+        res.status(HttpStatus.OK).json({ title: "Успех", text: "Настройки успешно сохранены" });
+    }
+
+}
