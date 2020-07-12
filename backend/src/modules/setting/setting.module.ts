@@ -8,4 +8,13 @@ import { AuthorizeMiddleware } from "../../middleware/authorize.middleware";
 import { LoggingMiddleware } from "../../middleware/logging.middleware";
 
 
-@Mo
+@Module({
+    modules: [DatabaseModule],
+    controllers: [SettingController],
+    components: [SettingService],
+    exports: [SettingService]
+})
+export class SettingModule {
+    public configure(consumer: MiddlewaresConsumer) {
+        consumer
+            .apply(Autho
