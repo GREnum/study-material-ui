@@ -17,4 +17,9 @@ import { LoggingMiddleware } from "../../middleware/logging.middleware";
 export class SettingModule {
     public configure(consumer: MiddlewaresConsumer) {
         consumer
-            .apply(Autho
+            .apply(AuthorizeMiddleware)
+            .forRoutes(SettingController)
+            .apply(LoggingMiddleware)
+            .forRoutes(SettingController);
+    }
+}
