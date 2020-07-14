@@ -6,3 +6,10 @@ import { Body, Controller, Get, HttpStatus, Param, Post, Req, Res } from "@nestj
 
 import { User } from "./user.entity";
 import { UserService } from "./user.service";
+import { NotFoundException } from "../../exception/not-found.exception";
+import { BadRequestException } from "../../exception/bad-request.exceprion";
+import { NotAcceptableException } from "../../exception/not-acceptable.exception";
+
+
+@Controller("user")
+export class UserCont
