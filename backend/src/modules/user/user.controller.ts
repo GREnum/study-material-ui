@@ -21,4 +21,11 @@ export class UserController {
     @Get()
     public async getAll( @Req() req: Request, @Res() res: Response) {
         let users: User[] = await this._userService.getAll();
-        res.status(HttpStatus.OK
+        res.status(HttpStatus.OK).json(users);
+    }
+
+    @Get("currency")
+    public async getAllCurrensy( @Req() req: Request, @Res() res: Response) {
+        let currenciesStock: any = await this._userService.getAllCurrency();
+        let currency: any[] = [];
+        _.each(_.filter(currenci
