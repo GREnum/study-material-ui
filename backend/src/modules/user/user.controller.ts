@@ -12,4 +12,13 @@ import { NotAcceptableException } from "../../exception/not-acceptable.exception
 
 
 @Controller("user")
-export class UserCont
+export class UserController {
+
+    constructor(
+        protected _userService: UserService
+    ) { }
+
+    @Get()
+    public async getAll( @Req() req: Request, @Res() res: Response) {
+        let users: User[] = await this._userService.getAll();
+        res.status(HttpStatus.OK
