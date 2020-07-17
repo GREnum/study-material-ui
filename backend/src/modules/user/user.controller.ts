@@ -28,4 +28,10 @@ export class UserController {
     public async getAllCurrensy( @Req() req: Request, @Res() res: Response) {
         let currenciesStock: any = await this._userService.getAllCurrency();
         let currency: any[] = [];
-        _.each(_.filter(currenci
+        _.each(_.filter(currenciesStock, (o) => !o.archived), function (currencyStock) {
+            currency.push({
+                id: _.last(_.split(currencyStock.meta.href, "/")),
+                name: currencyStock.name
+            });
+        });
+        res.statu
