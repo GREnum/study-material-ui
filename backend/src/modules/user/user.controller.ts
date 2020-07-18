@@ -34,4 +34,13 @@ export class UserController {
                 name: currencyStock.name
             });
         });
-        res.statu
+        res.status(HttpStatus.OK).json(currency);
+    }
+
+    @Get("reload")
+    public async reload( @Req() req: Request, @Res() res: Response) {
+        res.status(HttpStatus.OK).json(_.pick(req["token"], ["name", "isAdmin"]));
+    }
+
+    @Post("register")
+    public async create( 
