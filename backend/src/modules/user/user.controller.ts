@@ -46,4 +46,10 @@ export class UserController {
     public async create( @Res() res: Response, @Body() user: User) {
         let usersStock: any[] = await this._userService.getStocksUserByEmail(user.name);
         if (usersStock.length === 0) {
-            throw new NotFoundException(`Не найден пользователь с e-mail "${user.name}" в сис
+            throw new NotFoundException(`Не найден пользователь с e-mail "${user.name}" в системе МойСклад!`);
+        }
+        if (usersStock.length > 1) {
+            throw new NotFoundException(`Найдено несколько пользователей с e-mail "${user.name}" в системе МойСклад!`);
+        }
+        let newUser: User = user;
+        newUser.stockId = usersStock[0].
