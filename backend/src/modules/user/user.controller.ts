@@ -52,4 +52,11 @@ export class UserController {
             throw new NotFoundException(`Найдено несколько пользователей с e-mail "${user.name}" в системе МойСклад!`);
         }
         let newUser: User = user;
-        newUser.stockId = usersStock[0].
+        newUser.stockId = usersStock[0].id;
+        newUser.password = this.encryptPassword(newUser.password);
+        let createdUser: User = await this._userService.add(newUser);
+        res.status(HttpStatus.OK).json(createdUser);
+    }
+
+    @Post("changepassword")
+    public async changePassword( @
