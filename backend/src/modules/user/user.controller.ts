@@ -59,4 +59,9 @@ export class UserController {
     }
 
     @Post("changepassword")
-    public async changePassword( @
+    public async changePassword( @Req() req: Request, @Res() res: Response, @Body() regUser: any) {
+        console.log(req["token"]);
+        if (regUser.password !== regUser.confirmPassword) {
+            throw new BadRequestException("Несовпадают пароли!");
+        }
+        let 
