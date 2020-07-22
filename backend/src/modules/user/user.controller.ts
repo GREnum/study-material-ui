@@ -64,4 +64,10 @@ export class UserController {
         if (regUser.password !== regUser.confirmPassword) {
             throw new BadRequestException("Несовпадают пароли!");
         }
-        let 
+        let user: User = req["token"];
+        if (req["token"].isAdmin) {
+            user = await this._userService.getByName(regUser.name);
+        }
+        user.password = this.encryptPassword(regUser.password);
+        user = await this._userService.add(user);
+        res.status(HttpStatus.OK).json({ title
