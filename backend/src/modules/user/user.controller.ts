@@ -70,4 +70,10 @@ export class UserController {
         }
         user.password = this.encryptPassword(regUser.password);
         user = await this._userService.add(user);
-        res.status(HttpStatus.OK).json({ title
+        res.status(HttpStatus.OK).json({ title: "Пароль успешно изменен", text: `у пользователя "${user.name}"` });
+    }
+
+    @Post("authenticate")
+    public async login( @Res() res: Response, @Body() user: User) {
+        let foundUser: User = await this._userService.getByName(user.name);
+        if 
