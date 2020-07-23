@@ -76,4 +76,8 @@ export class UserController {
     @Post("authenticate")
     public async login( @Res() res: Response, @Body() user: User) {
         let foundUser: User = await this._userService.getByName(user.name);
-        if 
+        if (foundUser.password !== this.encryptPassword(user.password)) {
+            throw new NotFoundException("Incorrect password");
+        }
+        let authUser: Partial<User> = _.pick(foundUser, ["id", "name", "isAdmin", "stockId"]);
+        let tokenLocale = jwt.sign(
