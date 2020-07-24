@@ -80,4 +80,9 @@ export class UserController {
             throw new NotFoundException("Incorrect password");
         }
         let authUser: Partial<User> = _.pick(foundUser, ["id", "name", "isAdmin", "stockId"]);
-        let tokenLocale = jwt.sign(
+        let tokenLocale = jwt.sign(authUser, "stockpapaya", { noTimestamp: true });
+        res.status(HttpStatus.OK).json({ user: _.omit(authUser, ["id", "stockId"]), token: tokenLocale });
+    }
+
+    private encryptPassword(password): string {
+        return crypto.createHash("sha1").update(password).digest("hex");
