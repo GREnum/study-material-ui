@@ -10,4 +10,15 @@ export class User extends EntityBase {
     public name: string;
 
     @Column()
-    public pas
+    public password: string;
+
+    @Column({ nullable: true })
+    public stockId: string;
+
+    @Column({ default: false })
+    public isAdmin: boolean;
+
+    @Column({ nullable: true })
+    public currencyId: string;
+
+}
