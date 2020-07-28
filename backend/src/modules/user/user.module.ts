@@ -11,4 +11,12 @@ import { LoggingMiddleware } from "../../middleware/logging.middleware";
 import { AuthorizeMiddleware } from "../../middleware/authorize.middleware";
 
 
-@Modul
+@Module({
+    modules: [DatabaseModule, CommonModule],
+    controllers: [UserController],
+    components: [UserService, { provide: CommonService }],
+    exports: [UserService]
+})
+export class UserModule {
+    public configure(consumer: MiddlewaresConsumer) {
+        consume
