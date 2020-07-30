@@ -19,4 +19,10 @@ import { AuthorizeMiddleware } from "../../middleware/authorize.middleware";
 })
 export class UserModule {
     public configure(consumer: MiddlewaresConsumer) {
-        consume
+        consumer
+            .apply(AuthorizeMiddleware)
+            .forRoutes(
+            { path: "/user/register", method: RequestMethod.POST },
+            { path: "/user/reload", method: RequestMethod.GET },
+            { path: "/user/", method: RequestMethod.GET },
+          
