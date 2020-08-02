@@ -17,4 +17,13 @@ export class UserService {
         private _databaseService: DatabaseService
     ) { }
 
-    protected get repository(): Promise<Repository
+    protected get repository(): Promise<Repository<User>> {
+        return this._databaseService.getRepository(User);
+    }
+
+    public async getAll(): Promise<User[]> {
+        return (await this.repository).find({ select: ["id", "name", "stockId"] });
+    }
+
+    public async add(user: User): Promise<User> {
+        return (a
