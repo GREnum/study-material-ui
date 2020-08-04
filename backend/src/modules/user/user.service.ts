@@ -26,4 +26,10 @@ export class UserService {
     }
 
     public async add(user: User): Promise<User> {
-        return (a
+        return (await this.repository).save(user).catch(error => {
+            throw new NotFoundException("Пользователь уже зарегистрирован в системе!");
+        });
+    }
+
+    public async getByName(nameUser: string): Promise<User> {
+        let user: User = await ((await
