@@ -32,4 +32,13 @@ export class UserService {
     }
 
     public async getByName(nameUser: string): Promise<User> {
-        let user: User = await ((await
+        let user: User = await ((await this.repository).findOne({ name: nameUser }));
+        if (!user) {
+            throw new NotFoundException("User not found!");
+        }
+
+        return user;
+    }
+
+    public async getStocksUserByEmail(email: string) {
+        let options = _.cloneDeep(await this._co
