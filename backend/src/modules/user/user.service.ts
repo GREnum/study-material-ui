@@ -41,4 +41,12 @@ export class UserService {
     }
 
     public async getStocksUserByEmail(email: string) {
-        let options = _.cloneDeep(await this._co
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/entity/counterparty?filter=email=" + email;
+        let users = JSON.parse(await request(options)).rows;
+
+        return users;
+    }
+
+    public async getAllCurrency() {
+        let options = _.cloneDeep(await this._commonS
