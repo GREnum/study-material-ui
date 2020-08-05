@@ -49,4 +49,11 @@ export class UserService {
     }
 
     public async getAllCurrency() {
-        let options = _.cloneDeep(await this._commonS
+        let options = _.cloneDeep(await this._commonServise.getOptions());
+        options.uri += "/entity/currency";
+
+        return JSON.parse(await request(options)).rows;
+    }
+
+    public async getById(id: number) {
+        return (await this.repository).findOneById(id, { select: ["id", "na
