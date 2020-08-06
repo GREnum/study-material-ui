@@ -56,4 +56,11 @@ export class UserService {
     }
 
     public async getById(id: number) {
-        return (await this.repository).findOneById(id, { select: ["id", "na
+        return (await this.repository).findOneById(id, { select: ["id", "name", "stockId", "currencyId"] });
+    }
+
+    public async getUserByStockId(stockId: string) {
+        return (await this.repository).findOne({ select: ["currencyId"], where: { stockId: stockId } });
+    }
+
+}
