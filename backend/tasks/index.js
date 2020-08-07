@@ -6,4 +6,15 @@ var watch = require("gulp-watch");
 var nodemon = require("gulp-nodemon");
 var sourcemaps = require("gulp-sourcemaps");
 var runSequence = require("run-sequence");
-var path = req
+var path = require("path");
+var _ = require("lodash");
+
+
+// Config of gulp plugins
+runSequence.options.showErrorStackTrace = false;
+
+gulp.task("compile", function() {
+    let project = ts.createProject("./tsconfig.json", { rootDir: "src" });
+
+    return project.src()
+    
