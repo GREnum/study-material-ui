@@ -17,4 +17,12 @@ gulp.task("compile", function() {
     let project = ts.createProject("./tsconfig.json", { rootDir: "src" });
 
     return project.src()
-    
+        .pipe(sourcemaps.init())
+        .pipe(project())
+        .js
+        .pipe(sourcemaps.mapSources(function(sourcePath, file) {
+            let n = _(file.history[0])
+                .slice(file.base.length + 1)
+                .filter(x => x === "/")
+                .value()
+       
