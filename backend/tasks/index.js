@@ -25,4 +25,14 @@ gulp.task("compile", function() {
                 .slice(file.base.length + 1)
                 .filter(x => x === "/")
                 .value()
-       
+                .length;
+
+            return _.repeat(".." + path.sep, n) + sourcePath;
+        }))
+        .pipe(sourcemaps.write(".", { includeContent: false }))
+        .pipe(gulp.dest("built"));
+});
+
+gulp.task("lint", function() {
+    return gulp.src("src/**/*.ts")
+    
