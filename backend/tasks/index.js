@@ -35,4 +35,13 @@ gulp.task("compile", function() {
 
 gulp.task("lint", function() {
     return gulp.src("src/**/*.ts")
-    
+        .pipe(tslint({ configuration: "./tslint.json" }))
+        .pipe(tslint.report({ summarizeFailureOutput: true }));
+});
+
+gulp.task("clean", function() {
+    return gulp.src(["built"])
+        .pipe(rimraf());
+});
+
+gulp.task("start", function(do
