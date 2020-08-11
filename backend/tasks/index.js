@@ -44,4 +44,14 @@ gulp.task("clean", function() {
         .pipe(rimraf());
 });
 
-gulp.task("start", function(do
+gulp.task("start", function(done) {
+    const SCRIPT = "./built/app.js"
+
+    let server = nodemon({
+        script: SCRIPT,
+        watch: ["built/**/*.*"],
+        delay: 3000
+    });
+
+    server.on("restart", function() {
+        console.log(`nodemon restarted ${S
