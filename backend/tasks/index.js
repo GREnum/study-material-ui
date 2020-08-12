@@ -67,4 +67,5 @@ gulp.task("watch", function() {
 });
 
 gulp.task("default", function() {
-    return runSequence("lin
+    return runSequence("lint", "clean", "compile", ["start", "watch"]);
+});
