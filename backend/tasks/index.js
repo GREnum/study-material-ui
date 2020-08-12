@@ -54,4 +54,17 @@ gulp.task("start", function(done) {
     });
 
     server.on("restart", function() {
-        console.log(`nodemon restarted ${S
+        console.log(`nodemon restarted ${SCRIPT}`);
+    });
+
+    server.on("close", function() {
+        done();
+    });
+});
+
+gulp.task("watch", function() {
+    watch(["src/**/*.ts"], () => runSequence("compile"));
+});
+
+gulp.task("default", function() {
+    return runSequence("lin
