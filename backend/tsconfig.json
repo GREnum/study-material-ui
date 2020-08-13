@@ -5,4 +5,13 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "emitDecoratorMetadata": true,
-        "experimentalD
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "rootDir": ".",
+        "outDir": "./built"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
