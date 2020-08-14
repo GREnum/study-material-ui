@@ -14,4 +14,14 @@
         ],
         "curly": true,
         "eofline": true,
-        "forin": fals
+        "forin": false,
+        "indent": [
+            true,
+            "spaces"
+        ],
+        "interface-name": false,
+        "jsdoc-format": true,
+        "label-position": true,
+        "max-line-length": false,
+        "member-access": true,
+        "
