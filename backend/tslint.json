@@ -51,4 +51,13 @@
         "no-internal-module": true,
         "no-null-keyword": false,
         "no-require-imports": false,
-        "no-shadowed-variable": t
+        "no-shadowed-variable": true,
+        "no-string-literal": false,
+        "no-switch-case-fall-through": true,
+        "no-trailing-whitespace": true,
+        "no-unused-expression": [
+            true,
+            "allow-fast-null-checks"
+        ],
+        "no-use-before-declare": true,
+        
