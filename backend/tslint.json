@@ -70,3 +70,15 @@
         ],
         "quotemark": [
             true,
+            "double",
+            "avoid-escape"
+        ],
+        "radix": true,
+        "semicolon": true,
+        "switch-default": true,
+        "trailing-comma": false,
+        "triple-equals": [
+            false
+        ],
+        "typedef": false,
+        "typedef-whitespace
