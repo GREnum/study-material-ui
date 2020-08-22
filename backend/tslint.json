@@ -90,4 +90,15 @@
                 "property-declaration": "nospace",
                 "variable-declaration": "nospace"
             }
-    
+        ],
+        "variable-name": [
+            true,
+            "check-format",
+            "allow-leading-underscore",
+            "allow-pascal-case",
+            "ban-keywords"
+        ],
+        "whitespace": [
+            true,
+            "check-branch",
+     
