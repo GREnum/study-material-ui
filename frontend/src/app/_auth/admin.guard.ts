@@ -14,4 +14,11 @@ export class AdminGuard implements CanActivate {
         private _toasterServise: ToasterService
     ) { }
 
-    public canActivate(route: ActivatedRouteSnaps
+    public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        if (this._authService.isAdmin()) {
+            return true;
+        }
+
+        this._toasterServise.pop("error", "Нет доступа к запрашиваемой странице", state.url);
+        this.router.navigate(["admin", "products"]);
+ 
