@@ -21,4 +21,9 @@ export class AdminGuard implements CanActivate {
 
         this._toasterServise.pop("error", "Нет доступа к запрашиваемой странице", state.url);
         this.router.navigate(["admin", "products"]);
- 
+        this._toasterServise.pop("success", "Вы перенаправлены на наш каталог", "admin/products");
+
+        return false;
+    }
+
+}
