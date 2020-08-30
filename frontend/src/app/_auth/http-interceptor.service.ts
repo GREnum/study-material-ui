@@ -6,4 +6,17 @@ import { ToasterService } from "angular2-toaster";
 
 import {
     HttpErrorResponse,
-    Htt
+    HttpEvent,
+    HttpHandler,
+    HttpInterceptor,
+    HttpRequest,
+    HttpResponse
+} from "@angular/common/http";
+
+import "rxjs/add/operator/do";
+
+
+@Injectable()
+export class HttpInterceptorService implements HttpInterceptor {
+    constructor(
+        
