@@ -25,4 +25,10 @@ export class HttpInterceptorService implements HttpInterceptor {
     ) { }
 
     public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const authService = t
+        const authService = this._injector.get(AuthService);
+        let currentUser = authService.getStorageCurrentUser();
+        const authReq = req.clone(
+            {
+                setHeaders: {
+                    "Content-Type": "application/json",
+                    "x-auth": currentUser && currentUser
