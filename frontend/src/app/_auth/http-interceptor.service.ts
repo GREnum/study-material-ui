@@ -31,4 +31,12 @@ export class HttpInterceptorService implements HttpInterceptor {
             {
                 setHeaders: {
                     "Content-Type": "application/json",
-                    "x-auth": currentUser && currentUser
+                    "x-auth": currentUser && currentUser.token || ""
+                }
+            }
+        );
+        return next.handle(authReq)
+            .do(evt => {
+                if (evt instanceof HttpResponse) {
+                    console.log("---> status:", evt.status);
+                    console.log("-
