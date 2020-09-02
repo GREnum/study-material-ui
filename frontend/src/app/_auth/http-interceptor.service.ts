@@ -39,4 +39,11 @@ export class HttpInterceptorService implements HttpInterceptor {
             .do(evt => {
                 if (evt instanceof HttpResponse) {
                     console.log("---> status:", evt.status);
-                    console.log("-
+                    console.log("---> filter:", req.params.get("filter"));
+                }
+            })
+            .catch((res) => {
+                if (res.status === 401) {
+                    this._router.navigate(["/login"]);
+                    return Observable.of([]);
+                }
