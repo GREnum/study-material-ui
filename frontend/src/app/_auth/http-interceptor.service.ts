@@ -47,3 +47,10 @@ export class HttpInterceptorService implements HttpInterceptor {
                     this._router.navigate(["/login"]);
                     return Observable.of([]);
                 }
+                if (res.status === 400) {
+                    this._toasterServise.pop("error", res.statusText, res.error.message);
+                    return Observable.of([]);
+                }
+
+                return Observable.throw(res);
+            }
