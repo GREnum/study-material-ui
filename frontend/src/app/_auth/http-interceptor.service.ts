@@ -53,4 +53,6 @@ export class HttpInterceptorService implements HttpInterceptor {
                 }
 
                 return Observable.throw(res);
-            }
+            });
+    }
+}
