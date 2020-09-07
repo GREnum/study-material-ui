@@ -24,4 +24,15 @@ $topnav-background-color: #222;
         border: 2px solid rgba(255,255,255,0.8);
         font-size: 18px;
         line-height: 40px;
- 
+        padding: 0 25px;
+    }
+    .rounded-btn:hover,.rounded-btn:focus,.rounded-btn:active,.rounded-btn:visited{
+        color: rgba(255,255,255,1);
+        border: 2px solid rgba(255,255,255,1);
+        outline: none;
+    }
+
+    h1 {
+        font-weight: 300;
+        margin-top: 20px;
+  
