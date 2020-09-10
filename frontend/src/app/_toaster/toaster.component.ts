@@ -5,4 +5,12 @@ import { ToasterService, ToasterConfig } from "angular2-toaster";
 
 
 @Component({
-    sel
+    selector: "app-toaster",
+    template: `<toaster-container [toasterconfig]="toasterconfig"></toaster-container>`
+})
+export class ToasterComponent {
+    public toasterconfig: ToasterConfig =
+
+    new ToasterConfig({
+        animation: "fade",
+        showCloseButt
