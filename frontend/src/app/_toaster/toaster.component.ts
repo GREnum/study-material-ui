@@ -13,4 +13,14 @@ export class ToasterComponent {
 
     new ToasterConfig({
         animation: "fade",
-        showCloseButt
+        showCloseButton: true,
+        tapToDismiss: false,
+        timeout: 3000,
+        newestOnTop: false,
+        mouseoverTimerStop: true
+    });
+
+    constructor(private _toasterServise: ToasterService) {
+    }
+
+}
