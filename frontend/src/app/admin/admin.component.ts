@@ -11,4 +11,12 @@ import { AuthService } from "../_auth/auth.service";
 })
 export class AdminComponent implements OnInit {
 
-    construc
+    constructor(
+        private router: Router,
+        private _router: ActivatedRoute,
+        private _authService: AuthService
+    ) { }
+
+    public async ngOnInit() {
+        console.log("AdminComponent loaded");
+        console.log(this.router.url);
