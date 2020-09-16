@@ -20,3 +20,8 @@ export class AdminComponent implements OnInit {
     public async ngOnInit() {
         console.log("AdminComponent loaded");
         console.log(this.router.url);
+        this._router.data.subscribe(
+            data => {
+                let newUser = this._authService.getStorageCurrentUser();
+                newUser.user = data.currentUser;
+                this._authService.setStorageCurrent
