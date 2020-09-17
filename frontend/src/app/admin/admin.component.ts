@@ -24,4 +24,11 @@ export class AdminComponent implements OnInit {
             data => {
                 let newUser = this._authService.getStorageCurrentUser();
                 newUser.user = data.currentUser;
-                this._authService.setStorageCurrent
+                this._authService.setStorageCurrentUser(newUser);
+                if (this.router.url === "/admin") {
+                    this.router.navigate(["/admin/products"], { relativeTo: this._router });
+                }
+            }
+        );
+    }
+}
