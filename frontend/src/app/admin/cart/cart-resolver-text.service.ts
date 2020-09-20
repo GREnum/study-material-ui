@@ -13,4 +13,10 @@ export class CartTextResolverService implements Resolve<ISetting> {
         private _settingService: SettingService
     ) { }
 
-    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Ob
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ISetting> {
+        let setting: Observable<ISetting> = this._settingService.getOnly("cartText");
+
+        return setting;
+    }
+
+}
