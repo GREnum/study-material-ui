@@ -8,4 +8,17 @@ import { CartTextResolverService } from "./cart-resolver-text.service";
 
 
 
-const routes: Route
+const routes: Routes = [
+    {
+        path: "",
+        component: CartComponent,
+        resolve: {
+            products: CartResolverService,
+            users: AllUsersResolverService,
+            cartText: CartTextResolverService
+        }
+    }
+];
+
+@NgModule({
+    imports: [RouterModule.forChild(rou
