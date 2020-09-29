@@ -2,4 +2,8 @@
     <div class="col-lg-8">
         <div class="card mb-3">
             <div class="card-header">Корзина</div>
-            <div class="card-block table-responsive
+            <div class="card-block table-responsive">
+                <table *ngIf="!isCartEmpty" class="product-list">
+                    <tbody>
+                        <tr class="row-wrap reserved scroll-here out-of-stock1" *ngFor="let product of products; let i = index">
+                            <td class="product-
