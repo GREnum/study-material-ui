@@ -69,4 +69,12 @@
             <div *ngIf="isAdmin" class="form-group">
                 <label for="agentId">Заказ от имени пользователя:</label>
                 <select class="form-control" name="agentId" [(ngModel)]="chooseUser">
-                    <option *ngFor="let user of allUser" [value]=
+                    <option *ngFor="let user of allUser" [value]="user.stockId">
+                        {{user.name}}
+                    </option>
+                </select>
+            </div>
+            <div [innerHTML]="cartText"></div>
+            <div>
+                <p>Количество: {{summaryCount}} шт.</p>
+                <p>Сумма: {{summar
