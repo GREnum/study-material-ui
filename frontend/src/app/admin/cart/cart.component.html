@@ -77,4 +77,9 @@
             <div [innerHTML]="cartText"></div>
             <div>
                 <p>Количество: {{summaryCount}} шт.</p>
-                <p>Сумма: {{summar
+                <p>Сумма: {{summaryAmount | number:'.2-2' }} {{codeCurrency}}</p>
+            </div>
+            <button [disabled]="createdOrder || summaryCount < 1 || (!chooseUser && isAdmin)" class="btn btn-success" (click)="createOrder()">Сделать заказ</button>
+        </div>
+    </div>
+<
