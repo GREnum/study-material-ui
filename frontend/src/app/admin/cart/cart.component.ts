@@ -19,4 +19,16 @@ export class CartComponent implements OnInit {
     public createdOrder: boolean = false;
     public isCartEmpty: boolean = true;
     public summaryCount: number = 0;
-    public summaryAmount: numb
+    public summaryAmount: number = 0;
+    public codeCurrency: string = "";
+    public allUser: RegisterUser[];
+    public isAdmin: boolean = false;
+
+    public chooseUser: string;
+    public name: string;
+
+    public cartText: string;
+
+    constructor(
+        private _ordersService: OrdersService,
+  
