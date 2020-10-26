@@ -11,4 +11,12 @@ import { AuthService } from "../../_auth/auth.service";
 
 
 @Component({
-    selec
+    selector: "app-cart",
+    templateUrl: "./cart.component.html"
+})
+export class CartComponent implements OnInit {
+    public products: IProduct[];
+    public createdOrder: boolean = false;
+    public isCartEmpty: boolean = true;
+    public summaryCount: number = 0;
+    public summaryAmount: numb
