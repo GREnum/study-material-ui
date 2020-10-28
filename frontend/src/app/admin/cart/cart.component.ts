@@ -38,4 +38,8 @@ export class CartComponent implements OnInit {
     ) { }
 
     public ngOnInit() {
-        this.allUser = _.filter(this._activate
+        this.allUser = _.filter(this._activatedRouter.snapshot.data["users"], (o: any) => { return !!o.stockId; });
+        this.isAdmin = this._authService.currentUser.user.isAdmin;
+        this._activatedRouter.data.subscribe(
+            data => {
+                this.cartText = data["cartText"] && data
