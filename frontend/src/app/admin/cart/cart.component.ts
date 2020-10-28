@@ -31,4 +31,11 @@ export class CartComponent implements OnInit {
 
     constructor(
         private _ordersService: OrdersService,
-  
+        private _positionsService: PositionsService,
+        private _activatedRouter: ActivatedRoute,
+        private _authService: AuthService,
+        private _router: Router
+    ) { }
+
+    public ngOnInit() {
+        this.allUser = _.filter(this._activate
