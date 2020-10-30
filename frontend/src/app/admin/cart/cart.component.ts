@@ -50,4 +50,10 @@ export class CartComponent implements OnInit {
         );
     }
 
-    public onChang
+    public onChangedPosition(objEvent: { productId: string; positionId: string }) {
+        this._positionsService.changePosition(this.products, objEvent.productId, objEvent.positionId);
+        this.reloadSummary();
+    }
+
+    public createOrder() {
+        this.createdOrder =
