@@ -56,4 +56,9 @@ export class CartComponent implements OnInit {
     }
 
     public createOrder() {
-        this.createdOrder =
+        this.createdOrder = true;
+        this._ordersService.createOrder(this.products, this.chooseUser).subscribe(
+            result => {
+                this._positionsService.deleteAllposition();
+                this._router.navigate(["/admin/orders"]);
+                this.createdOrder = false;
