@@ -62,3 +62,13 @@ export class CartComponent implements OnInit {
                 this._positionsService.deleteAllposition();
                 this._router.navigate(["/admin/orders"]);
                 this.createdOrder = false;
+            }
+        );
+    }
+
+    private reloadSummary() {
+        this.summaryCount = 0;
+        this.summaryAmount = 0;
+        _.each(this.products, (product) => {
+            this.summaryCount += product.quantity;
+            this.summaryAmount += product.quanti
