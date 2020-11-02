@@ -71,4 +71,9 @@ export class CartComponent implements OnInit {
         this.summaryAmount = 0;
         _.each(this.products, (product) => {
             this.summaryCount += product.quantity;
-            this.summaryAmount += product.quanti
+            this.summaryAmount += product.quantity * product.salePrice;
+            this.codeCurrency = product.codeCurrency;
+        });
+    }
+
+}
