@@ -15,4 +15,17 @@ import { CartTextResolverService } from "./cart-resolver-text.service";
     imports: [
         CommonModule,
         CartRoutingModule,
- 
+        PositionsModule,
+        FormsModule
+    ],
+    declarations: [
+        CartComponent
+    ],
+    providers: [
+        OrdersService,
+        CartResolverService,
+        AllUsersResolverService,
+        CartTextResolverService
+    ]
+})
+export clas
