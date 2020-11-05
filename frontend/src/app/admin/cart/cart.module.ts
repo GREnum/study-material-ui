@@ -28,4 +28,4 @@ import { CartTextResolverService } from "./cart-resolver-text.service";
         CartTextResolverService
     ]
 })
-export clas
+export class CartModule { }
