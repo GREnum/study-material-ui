@@ -13,4 +13,14 @@ $topnav-background-color: #222;
         .buy-now {
             a {
                 color: #999;
-    
+            }
+        }
+        .dropdown-menu {
+            top: 40px;
+            right: -5px;
+            left: auto;
+            .message-preview {
+                .media {
+                    .media-body {
+                        .media-heading {
+                    
