@@ -43,3 +43,18 @@ $topnav-background-color: #222;
             }
         }
     }
+}
+
+.messages {
+    width: 300px;
+    .media {
+        border-bottom: 1px solid #DDD;
+        padding: 5px 10px;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .media-body {
+        h5 {
+            font-size: 13px;
+ 
