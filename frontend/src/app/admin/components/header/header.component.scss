@@ -57,4 +57,17 @@ $topnav-background-color: #222;
     .media-body {
         h5 {
             font-size: 13px;
- 
+            font-weight: 600;
+        }
+        .small {
+            margin: 0;
+        }
+        .last {
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+}
+
+.header .navbar {
+    background: $topnav-background-c
