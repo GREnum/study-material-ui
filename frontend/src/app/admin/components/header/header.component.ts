@@ -15,4 +15,11 @@ export class HeaderComponent implements OnInit {
         private _authService: AuthService
     ) { }
 
-    public ng
+    public ngOnInit() {
+        this.userName = this._authService.currentUser.user.name;
+    }
+
+    public toggleSidebar() {
+        const dom: any = document.querySelector("body");
+        const domHead: any = document.querySelector(".navbar-collapse");
+        dom.classList.toggle(this.pushRightC
