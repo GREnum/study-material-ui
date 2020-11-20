@@ -1,0 +1,20 @@
+
+.cl-sizerow-plus,
+.cl-sizerow-minus,
+.cl-sizerow-size-title,
+.cl-sizerow-size-amount {
+    width: 25px;
+    height: 25px;
+    padding: 0 0;
+    font-size: 16px;
+    font-family: "Arial Narrow";
+    color: #666;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: default;
+}
+
+.cl-sizerow-plus:hover,
+.cl-sizerow-minus:hover {
+    color: red;
+}
