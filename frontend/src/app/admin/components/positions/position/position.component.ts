@@ -14,4 +14,12 @@ export class PositionComponent {
         if (!this.changed) {
             return true;
         }
-        let oldQuantity = this.position.
+        let oldQuantity = this.position.quantity;
+
+        if (increased && this.position.quantity < this.position.stock) {
+            this.position.quantity++;
+        }
+
+        if (!increased && this.position.quantity !== 0) {
+            this.position.quantity--;
+      
