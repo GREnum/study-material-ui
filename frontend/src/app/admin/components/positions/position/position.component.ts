@@ -22,4 +22,10 @@ export class PositionComponent {
 
         if (!increased && this.position.quantity !== 0) {
             this.position.quantity--;
-      
+        }
+
+        if (oldQuantity !== this.position.quantity) {
+            this.onChangePositionQuantity.emit(this.position.id);
+        }
+    }
+}

@@ -1,0 +1,4 @@
+
+<div class="cl-size" *ngFor="let position of positions; let i = index">
+    <position-comp [position]="position" (onChangePositionQuantity)="onChangePositionQuantity($event)" [changed]="changed"></position-comp>
+</div>
