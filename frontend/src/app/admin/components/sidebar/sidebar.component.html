@@ -1,0 +1,19 @@
+
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <a routerLink="products" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <span><i class="fa fa-fw fa-dashboard"></i>&nbsp;Каталог</span>
+        </a>
+        <a [routerLink]="['cart']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <span><i class="fa fa-fw fa-shopping-cart"></i>&nbsp;Корзина</span>
+        </a>
+        <a [routerLink]="['orders']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <span><i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;Заказы</span>
+        </a>
+        <div *ngIf="isAdmin" class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')" [routerLinkActive]="['router-link-active']">
+                <span><i class="fa fa-plus"></i>&nbsp;Пользователи</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>

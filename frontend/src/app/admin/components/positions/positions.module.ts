@@ -7,4 +7,17 @@ import { PositionsComponent } from "./positions.component";
 
 
 @NgModule({
- 
+    imports: [
+        CommonModule,
+        RouterModule
+    ],
+    declarations: [
+        PositionsComponent,
+        PositionComponent
+    ],
+    exports: [
+        PositionsComponent,
+        PositionComponent
+    ]
+})
+export class PositionsModule { }
