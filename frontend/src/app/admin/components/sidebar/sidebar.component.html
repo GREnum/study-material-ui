@@ -17,3 +17,20 @@
             <li class="nested" [class.expand]="showMenu === 'pages'">
                 <ul class="submenu">
                     <li>
+                        <a [routerLink]="['user','changePassword']" [routerLinkActive]="['router-link-active']">
+                            <span><i class="fa fa-fw fa-unlock-alt"></i>Сменить пароль</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['user']" [routerLinkActive]="['router-link-active']">
+                            <span><i class="fa fa-fw fa-user-plus"></i>Регистрация</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <a  *ngIf="isAdmin" [routerLink]="['setting']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <span><i class="fa fa-fw fa-wrench"></i>&nbsp;Настройки</span>
+        </a>
+    </ul>
+</nav>
