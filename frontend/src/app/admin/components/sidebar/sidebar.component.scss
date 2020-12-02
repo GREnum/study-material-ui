@@ -26,4 +26,13 @@ $topnav-background-color: #222;
             border: 0;
             border-radius: 0;
             color: #999;
-      
+            text-decoration: none;
+            .fa {
+                margin-right: 10px;
+            }
+        }
+        a:hover {
+            background: darken($topnav-background-color, 5%);
+            color: #fff;
+        }
+        a.router-link-ac
