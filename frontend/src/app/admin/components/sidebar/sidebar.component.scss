@@ -35,4 +35,16 @@ $topnav-background-color: #222;
             background: darken($topnav-background-color, 5%);
             color: #fff;
         }
-        a.router-link-ac
+        a.router-link-active {
+            background: darken($topnav-background-color, 5%);
+            color: #fff;
+        }
+    }
+    .sidebar-dropdown {
+        *:focus {
+            border-radius: none;
+            border: none;
+        }
+        .panel-title {
+            font-size: 1rem;
+            height
