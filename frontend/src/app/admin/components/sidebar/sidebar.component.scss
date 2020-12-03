@@ -47,4 +47,12 @@ $topnav-background-color: #222;
         }
         .panel-title {
             font-size: 1rem;
-            height
+            height: 50px;
+            margin-bottom: 0;
+            a {
+                color: #999;
+                text-decoration: none;
+                font-weight: 400;
+                background: $topnav-background-color;
+                span {
+                    position: r
