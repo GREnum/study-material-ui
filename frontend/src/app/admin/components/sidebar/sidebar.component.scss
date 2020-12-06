@@ -64,4 +64,13 @@ $topnav-background-color: #222;
             a:hover,
             a:focus {
                 color: #fff;
-                outline
+                outline: none;
+                outline-offset: -2px;
+            }
+        }
+        .panel-title:hover {
+            background: darken($topnav-background-color, 5%);
+        }
+        .panel-collapse {
+            border-radious: 0;
+            border: no
