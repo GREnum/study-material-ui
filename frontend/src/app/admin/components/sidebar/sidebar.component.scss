@@ -55,4 +55,13 @@ $topnav-background-color: #222;
                 font-weight: 400;
                 background: $topnav-background-color;
                 span {
-                    position: r
+                    position: relative;
+                    display: block;
+                    padding: .75rem 1.5rem;
+                    padding-top: 1rem;
+                }
+            }
+            a:hover,
+            a:focus {
+                color: #fff;
+                outline
