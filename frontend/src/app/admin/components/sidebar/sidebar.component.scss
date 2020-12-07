@@ -73,4 +73,11 @@ $topnav-background-color: #222;
         }
         .panel-collapse {
             border-radious: 0;
-            border: no
+            border: none;
+            .panel-body {
+                .list-group-item {
+                    border-radius: 0;
+                    background-color: $topnav-background-color;
+                    border: 0 solid transparent;
+                    a {
+      
