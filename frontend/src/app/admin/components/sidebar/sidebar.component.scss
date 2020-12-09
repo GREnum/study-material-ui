@@ -80,4 +80,11 @@ $topnav-background-color: #222;
                     background-color: $topnav-background-color;
                     border: 0 solid transparent;
                     a {
-      
+                        color: #999;
+                    }
+                    a:hover {
+                        color: #FFF;
+                    }
+                }
+                .list-group-item:hover {
+                    background: darken($topnav-background-color, 5%);
