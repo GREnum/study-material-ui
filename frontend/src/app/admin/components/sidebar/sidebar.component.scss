@@ -107,4 +107,14 @@ $topnav-background-color: #222;
     }
     & .expand {
         ul.submenu {
-       
+            display: block;
+            list-style-type: none;
+            height: auto;
+            li {
+                a {
+                    color: #FFF;
+                    padding: 10px;
+                    display: block;
+                }
+            }
+        }
