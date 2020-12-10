@@ -88,3 +88,23 @@ $topnav-background-color: #222;
                 }
                 .list-group-item:hover {
                     background: darken($topnav-background-color, 5%);
+                }
+            }
+        }
+    }
+}
+
+.nested-menu {
+    .list-group-item {
+        cursor: pointer;
+    }
+    .nested {
+        list-style-type: none;
+    }
+    ul.submenu {
+        display: none;
+        height: 0;
+    }
+    & .expand {
+        ul.submenu {
+       
