@@ -10,4 +10,14 @@ import { DashboardService } from "./dashboard.service";
 export class DashboardComponent implements OnInit {
     public counterparties: any;
     constructor(
-        private _
+        private _dashboardService: DashboardService
+    ) { }
+
+    public ngOnInit() {
+        this._dashboardService.getAllCounter().subscribe(
+            result => {
+                this.counterparties = result;
+            }
+        );
+    }
+}
