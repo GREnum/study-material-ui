@@ -8,4 +8,10 @@ export class DashboardService {
         private _httpClient: HttpClient
     ) { }
 
-    public getAllCount
+    public getAllCounter() {
+        const headers = new HttpHeaders({ "Content-Type": "application/json" });
+        const options = { headers: headers };
+        return this._httpClient.get("/api/counterparty/", options);
+    }
+
+}
