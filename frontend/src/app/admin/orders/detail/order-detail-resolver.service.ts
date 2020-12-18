@@ -7,4 +7,12 @@ import { OrdersService } from "../orders.service";
 
 
 @Injectable()
-export class OrderDetailResolverService implements Resolve<IOrder>
+export class OrderDetailResolverService implements Resolve<IOrder> {
+
+    constructor(
+        private _ordersService: OrdersService
+    ) { }
+
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IOrder> {
+        let orderId = route.params["id"];
+        let order: Observable<IOrder> = this._ord
