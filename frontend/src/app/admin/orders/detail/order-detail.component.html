@@ -3,4 +3,8 @@
         <div class="card mb-3">
             <div class="card-header">Заказ №{{order.name}}</div>
             <div class="card-block table-responsive">
-                <tab
+                <table class="product-list">
+                    <tbody>
+                        <tr class="row-wrap reserved scroll-here out-of-stock1" *ngFor="let product of products; let i = index">
+                            <td class="product-description">
+                                <table
