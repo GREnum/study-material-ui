@@ -32,4 +32,8 @@
                                                             <div class="total_price">
                                                                 <span class="tp_item">Итого: </span>
                                                                 <span class="tp_item tp_number">
-                                                                    <span class="tp_prop_color">{{product.salePrice*(product.quantity || 0) | number:'.2-2' }} {{order.curr
+                                                                    <span class="tp_prop_color">{{product.salePrice*(product.quantity || 0) | number:'.2-2' }} {{order.currencyCode}} ({{product.quantity || 0}} шт)</span>
+                                                                </span>
+                                                            </div>
+                                                        </tr>
+                  
