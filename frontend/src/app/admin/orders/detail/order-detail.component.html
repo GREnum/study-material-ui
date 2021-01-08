@@ -52,4 +52,6 @@
     <div class="col-lg-4">
         <div class="jumbotron">
             <h2>Доброго времени суток!</h2>
-        
+            <p>Ваш заказ <b>№ {{order.name}}</b> на общую сумму <b>{{order.sum | number:'.2-2'}} {{order.currencyCode}}</b> на <b>{{order.quantity}}</b> единиц товара.</p>
+            <p>Статус Вашего заказа: <b>{{order.state.name}}</b></p>
+            <div *ngIf="order
