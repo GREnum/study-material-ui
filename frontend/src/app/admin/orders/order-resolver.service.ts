@@ -8,4 +8,11 @@ import { OrdersService } from "./orders.service";
 
 
 @Injectable()
-export class OrderResolverService implements Resolve<IOrde
+export class OrderResolverService implements Resolve<IOrder> {
+
+    constructor(
+        private _ordersService: OrdersService
+    ) { }
+
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<IOrder> {
+        let orders: Observable<IOrd
