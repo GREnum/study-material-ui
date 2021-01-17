@@ -14,4 +14,9 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let order of orders; let i = index">
-                   
+                        <td>
+                            <a [routerLink]="[order.id]">{{ order.name}}</a>
+                        </td>
+                        <td>{{ order.sum | number:'.2-2' }} {{order.currencyCode}}</td>
+                        <td>{{ order.created | date:'dd-MM-yyyy HH:mm'}}</td>
+                 
