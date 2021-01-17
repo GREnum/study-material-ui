@@ -19,4 +19,11 @@
                         </td>
                         <td>{{ order.sum | number:'.2-2' }} {{order.currencyCode}}</td>
                         <td>{{ order.created | date:'dd-MM-yyyy HH:mm'}}</td>
-                 
+                        <td>{{ order.state.name}}</td>
+                        <td>
+                            <div class="table_comment">{{order.description}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+      
