@@ -22,4 +22,14 @@ export interface IOrder {
 
 @Component({
     selector: "app-orders",
-    tem
+    templateUrl: "./orders.component.html"
+})
+export class OrdersComponent implements OnInit {
+    public orders: IOrder[];
+
+    constructor(
+        private _route: ActivatedRoute,
+        private _toasterServise: ToasterService
+    ) { }
+
+    public
