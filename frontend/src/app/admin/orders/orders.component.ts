@@ -32,4 +32,8 @@ export class OrdersComponent implements OnInit {
         private _toasterServise: ToasterService
     ) { }
 
-    public
+    public ngOnInit() {
+        this.orders = this._route.snapshot.data["orders"];
+    }
+
+}
