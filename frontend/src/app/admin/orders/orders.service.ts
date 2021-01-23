@@ -13,4 +13,12 @@ export class OrdersService {
     ) { }
 
     public getAllOrders(): Observable<any> {
-        return this._http
+        return this._httpClient.get("/api/order/");
+    }
+
+    public getProductById(productId: Array<IProduct>): Observable<any> {
+        return this._httpClient.post("/api/product/", JSON.stringify(productId));
+    }
+
+    public getOrderById(orderId: string): Observable<any> {
+        ret
