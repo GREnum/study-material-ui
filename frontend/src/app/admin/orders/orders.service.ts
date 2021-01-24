@@ -29,4 +29,6 @@ export class OrdersService {
             agentId: agentId,
             products: products
         });
-        return this
+        return this._httpClient.post("/api/order/", body);
+    }
+}
