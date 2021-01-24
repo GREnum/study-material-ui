@@ -21,4 +21,12 @@ export class OrdersService {
     }
 
     public getOrderById(orderId: string): Observable<any> {
-        ret
+        return this._httpClient.get("/api/order/get?id=" + orderId);
+    }
+
+    public createOrder(products: IProduct[], agentId?: string): Observable<any> {
+        let body = JSON.stringify({
+            agentId: agentId,
+            products: products
+        });
+        return this
