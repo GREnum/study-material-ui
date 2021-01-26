@@ -3,4 +3,14 @@ import { Injectable } from "@angular/core";
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
 
 import { ISetting } from "../setting/setting.interface";
-import { S
+import { SettingService } from "../setting/setting.service";
+
+
+@Injectable()
+export class ProductTextResolverService implements Resolve<ISetting> {
+
+    constructor(
+        private _settingService: SettingService
+    ) { }
+
+    public resolve(route: ActivatedRouteSnapshot,
