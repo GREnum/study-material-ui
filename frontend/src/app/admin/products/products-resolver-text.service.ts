@@ -13,4 +13,10 @@ export class ProductTextResolverService implements Resolve<ISetting> {
         private _settingService: SettingService
     ) { }
 
-    public resolve(route: ActivatedRouteSnapshot,
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ISetting> {
+        let setting: Observable<ISetting> = this._settingService.getOnly("productText");
+
+        return setting;
+    }
+
+}
