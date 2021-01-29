@@ -1,2 +1,9 @@
 <div class="row">
-    <div class="loading-indicator" [ngC
+    <div class="loading-indicator" [ngClass]="{show_loader:loadingProducts}">
+        <div class="loader">
+            <i class="fa fa-circle-o-notch fa-spin"></i> Загрузка товаров
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="mb-3">
+            <form role="form" #
