@@ -6,4 +6,7 @@
     </div>
     <div class="col-lg-8">
         <div class="mb-3">
-            <form role="form" #
+            <form role="form" #searchForm="ngForm" novalidate autocomplete="off" (ngSubmit)="onSearch()">
+                <div class="form-group input-group">
+                    <input class="form-control" type="text" placeholder="Поиск" name="search" [(ngModel)]="search">
+              
