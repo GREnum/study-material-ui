@@ -9,4 +9,10 @@
             <form role="form" #searchForm="ngForm" novalidate autocomplete="off" (ngSubmit)="onSearch()">
                 <div class="form-group input-group">
                     <input class="form-control" type="text" placeholder="Поиск" name="search" [(ngModel)]="search">
-              
+                    <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <table class
