@@ -15,4 +15,7 @@
                 </div>
             </form>
         </div>
-        <table class
+        <table class="product-list">
+            <tbody infiniteScroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
+                <tr class="row-wrap reserved scroll-here out-of-stock1" *ngFor="let product of products; let i = index">
+    
