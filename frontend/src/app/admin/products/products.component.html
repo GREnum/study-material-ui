@@ -18,4 +18,9 @@
         <table class="product-list">
             <tbody infiniteScroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
                 <tr class="row-wrap reserved scroll-here out-of-stock1" *ngFor="let product of products; let i = index">
-    
+                    <td class="product-description">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="img-table">
+                                        <img src="{{product.image}}" alt="{{
