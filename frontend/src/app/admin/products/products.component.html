@@ -31,4 +31,6 @@
                                                 <tr class="description_items">
                                                     <td>
                                                         <div class="name-brand">{{product.name}}</div>
-                                                 
+                                                        <div class="cl-size-container">
+                                                            <positions-comp [productId]="product.id" [(positions)]="product.positions" (onChangePosition)="onChangedPosition($event)"></positions-comp>
+               
