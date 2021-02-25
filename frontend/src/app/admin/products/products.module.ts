@@ -13,4 +13,15 @@ import { ProductTextResolverService } from "./products-resolver-text.service";
 @NgModule({
     imports: [
         CommonModule,
-       
+        FormsModule,
+        // NgbCarouselModule.forRoot(),
+        // NgbAlertModule.forRoot(),
+        ProductsRoutingModule,
+        PositionsModule,
+        InfiniteScrollModule
+    ],
+    declarations: [
+        ProductsComponent
+    ],
+    providers: [
+        ProductsSe
