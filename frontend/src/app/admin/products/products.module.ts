@@ -24,4 +24,8 @@ import { ProductTextResolverService } from "./products-resolver-text.service";
         ProductsComponent
     ],
     providers: [
-        ProductsSe
+        ProductsService,
+        ProductTextResolverService
+    ],
+})
+export class ProductsModule { }
