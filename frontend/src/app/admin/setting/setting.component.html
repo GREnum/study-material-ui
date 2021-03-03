@@ -7,4 +7,6 @@
             <div class="card-block">
                 <div class="form-content">
                     <form role="form" #stockFrom="ngForm" novalidate autocomplete="off" (ngSubmit)="saveAll()">
-                        <div class="form-group" [ngCl
+                        <div class="form-group" [ngClass]="{has_success:(login.touched || login.dirty) && !login.errors, has_danger: (login.touched || login.dirty) && login.errors}">
+                            <label for="loginStock" class="form-control-label">Логин</label>
+                            <input type="text" class="form-control" id="loginStock" required name="loginStock" [(n
