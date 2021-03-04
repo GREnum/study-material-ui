@@ -11,4 +11,8 @@
                             <label for="loginStock" class="form-control-label">Логин</label>
                             <input type="text" class="form-control" id="loginStock" required name="loginStock" [(ngModel)]="loginStock.value" #login="ngModel">
                             <div class="help-block help-block-danger" *ngIf="(login.touched || login.dirty) && login.errors">
-                                <span *ngIf="login.errors && login.err
+                                <span *ngIf="login.errors && login.errors.required">Логин - обязательное поле</span>
+                            </div>
+                            <p class="help-block">Необходимо указать логин админа для авторизации в МойСклад</p>
+                        </div>
+                       
