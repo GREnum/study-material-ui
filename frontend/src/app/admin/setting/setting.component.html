@@ -18,4 +18,7 @@
                         <div class="form-group" [ngClass]="{has_success:(password.touched || password.dirty) && !password.errors, has_danger: (password.touched || password.dirty) && password.errors}">
                             <label for="passwordStock" class="form-control-label">Пароль</label>
                             <input type="text" class="form-control" id="passwordStock" required name="passwordStock" [(ngModel)]="passwordStock.value" #password="ngModel">
-                            <div class="help-block help-block-danger" 
+                            <div class="help-block help-block-danger" *ngIf="(password.touched || password.dirty) && password.errors">
+                                <span *ngIf="password.errors && password.errors.required">Логин - обязательное поле</span>
+                            </div>
+                            <p class="help-block">Необходимо у
