@@ -21,4 +21,6 @@
                             <div class="help-block help-block-danger" *ngIf="(password.touched || password.dirty) && password.errors">
                                 <span *ngIf="password.errors && password.errors.required">Логин - обязательное поле</span>
                             </div>
-                            <p class="help-block">Необходимо у
+                            <p class="help-block">Необходимо указать пароль админа для авторизации в МойСклад</p>
+                        </div>
+                        <div class="form-group" [ngClass]="{has_success:(folder.touched || folder.dirty) && !folder.errors, has_danger: (folder.touched || folder.dirty) && folder.errors}"
