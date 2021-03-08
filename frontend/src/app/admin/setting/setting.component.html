@@ -25,4 +25,9 @@
                         </div>
                         <div class="form-group" [ngClass]="{has_success:(folder.touched || folder.dirty) && !folder.errors, has_danger: (folder.touched || folder.dirty) && folder.errors}">
                             <label for="folderId" class="form-control-label">Папка для отображения товаров</label>
-                            <select id="folderId" class="form-control" name="folderId" [(ngModel)]="folderId.value" required #folder
+                            <select id="folderId" class="form-control" name="folderId" [(ngModel)]="folderId.value" required #folder="ngModel">
+                                <option  *ngFor="let folder of folders" [value]="folder.id">
+                                    {{folder.name}}
+                                </option>
+                            </select>
+              
