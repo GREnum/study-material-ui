@@ -35,4 +35,13 @@
                                 <span *ngIf="folder.errors && folder.errors.required">Папка - обязательное поле</span>
                             </div>
                         </div>
-                        <button class="btn btn-success" type="submit" [disab
+                        <button class="btn btn-success" type="submit" [disabled]="!stockFrom.valid">Сохранить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10">
+        <div class="card card-default mb-3">
+            <div class="card-header">
+                <i class="fa fa-dashboar
