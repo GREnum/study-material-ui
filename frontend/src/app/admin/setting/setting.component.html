@@ -31,4 +31,8 @@
                                 </option>
                             </select>
                             <p class="help-block">Необходимо выбрать папку из выпадающего списка из которой будут грузиться товары в /admin/products</p>
-                            <div class="help-block help-block-danger" *ngIf="(folder.touched || folder.dirty) && f
+                            <div class="help-block help-block-danger" *ngIf="(folder.touched || folder.dirty) && folder.errors">
+                                <span *ngIf="folder.errors && folder.errors.required">Папка - обязательное поле</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-success" type="submit" [disab
