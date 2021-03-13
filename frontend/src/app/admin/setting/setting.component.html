@@ -49,4 +49,11 @@
             <div class="card-block">
                 <ckeditor [(ngModel)]="productText.value" [readonly]="false" debounce="500">
                 </ckeditor>
-                <button class="btn btn-success mt-3" type="submit" (click)="save
+                <button class="btn btn-success mt-3" type="submit" (click)="saveAll()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-10">
+        <div class="card card-default mb-3">
+            <div class="card-header">
+                <i class="fa fa-shopping-cart fa-fw"></
