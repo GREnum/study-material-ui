@@ -44,4 +44,9 @@
     <div class="col-lg-10">
         <div class="card card-default mb-3">
             <div class="card-header">
-                <i class="fa fa-dashboar
+                <i class="fa fa-dashboard fa-fw"></i> Текст в каталоге
+            </div>
+            <div class="card-block">
+                <ckeditor [(ngModel)]="productText.value" [readonly]="false" debounce="500">
+                </ckeditor>
+                <button class="btn btn-success mt-3" type="submit" (click)="save
