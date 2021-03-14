@@ -56,4 +56,9 @@
     <div class="col-lg-10">
         <div class="card card-default mb-3">
             <div class="card-header">
-                <i class="fa fa-shopping-cart fa-fw"></
+                <i class="fa fa-shopping-cart fa-fw"></i> Текст в корзине
+            </div>
+            <div class="card-block">
+                <ckeditor [(ngModel)]="cartText.value" [readonly]="false" debounce="500">
+                </ckeditor>
+                <button class="btn btn-success mt-3" type="submit" (click)="saveAll
