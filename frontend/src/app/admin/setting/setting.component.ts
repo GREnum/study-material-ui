@@ -19,4 +19,13 @@ export class SettingComponent implements OnInit {
     public passwordStock: ISetting;
     public cartText: ISetting;
     public productText: ISetting;
-    pu
+    public orderComment: ISetting;
+    public folderId: ISetting;
+
+    constructor(
+        private _activatedRouter: ActivatedRoute,
+        private _settingService: SettingService,
+        private _toasterServise: ToasterService
+    ) { }
+
+    public ngOnInit()
