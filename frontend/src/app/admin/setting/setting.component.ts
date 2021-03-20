@@ -28,4 +28,9 @@ export class SettingComponent implements OnInit {
         private _toasterServise: ToasterService
     ) { }
 
-    public ngOnInit()
+    public ngOnInit() {
+        this._activatedRouter.data.subscribe(
+            data => {
+                this.setting = data["setting"].settings;
+                this.folders = data["setting"].folders;
+                this.loginStock = _.find(this.setting, (o) => o.code === "lo
