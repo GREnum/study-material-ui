@@ -33,4 +33,7 @@ export class SettingComponent implements OnInit {
             data => {
                 this.setting = data["setting"].settings;
                 this.folders = data["setting"].folders;
-                this.loginStock = _.find(this.setting, (o) => o.code === "lo
+                this.loginStock = _.find(this.setting, (o) => o.code === "loginStock");
+                this.passwordStock = _.find(this.setting, (o) => o.code === "passwordStock");
+                this.cartText = _.find(this.setting, (o) => o.code === "cartText");
+                this.productText = _.find(this.setting, (o) => o.co
