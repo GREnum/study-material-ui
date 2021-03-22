@@ -36,4 +36,12 @@ export class SettingComponent implements OnInit {
                 this.loginStock = _.find(this.setting, (o) => o.code === "loginStock");
                 this.passwordStock = _.find(this.setting, (o) => o.code === "passwordStock");
                 this.cartText = _.find(this.setting, (o) => o.code === "cartText");
-                this.productText = _.find(this.setting, (o) => o.co
+                this.productText = _.find(this.setting, (o) => o.code === "productText");
+                this.orderComment = _.find(this.setting, (o) => o.code === "orderComment");
+                this.folderId = _.find(this.setting, (o) => o.code === "folderId");
+            }
+        );
+    }
+
+    public saveAll() {
+        thi
