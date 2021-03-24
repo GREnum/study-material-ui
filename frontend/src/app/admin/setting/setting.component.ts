@@ -44,4 +44,10 @@ export class SettingComponent implements OnInit {
     }
 
     public saveAll() {
-        thi
+        this._settingService.setSetting(this.setting).subscribe(
+            result => {
+                this._toasterServise.pop("success", result.title, result.text);
+            },
+            error => {
+                console.log(error);
+           
