@@ -50,4 +50,8 @@ export class SettingComponent implements OnInit {
             },
             error => {
                 console.log(error);
-           
+            }
+        );
+    }
+
+}
