@@ -9,4 +9,11 @@ import { AuthService } from "../../_auth/auth.service";
 export class AllUsersResolverService implements Resolve<any> {
 
     constructor(
-        private _route: Act
+        private _route: ActivatedRoute,
+        private _authService: AuthService
+    ) { }
+
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
+        let users;
+        if (this._authService.currentUser.user.isAdmin) {
+            return t
