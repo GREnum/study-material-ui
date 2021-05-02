@@ -3,4 +3,8 @@
         <div class="card card-default">
             <div class="card-header">
                 <i class="fa fa-user-plus fa-fw"></i> Создание пользователя
-            </di
+            </div>
+            <div class="card-block">
+                <form role="form" #registerForm="ngForm" novalidate autocomplete="off" (ngSubmit)="register(registerForm)">
+                    <div class="form-content">
+                        <div class="form-group" [ngClass]="{h
