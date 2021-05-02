@@ -13,4 +13,6 @@ export class CurrencyResolverService implements Resolve<any> {
     ) { }
 
     public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-        return this.__use
+        return this.__userService.getAllCurrency();
+    }
+}
