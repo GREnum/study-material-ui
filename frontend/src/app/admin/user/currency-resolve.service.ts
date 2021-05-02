@@ -6,4 +6,11 @@ import { UserService } from "./user.service";
 
 
 @Injectable()
-export class Cu
+export class CurrencyResolverService implements Resolve<any> {
+
+    constructor(
+        private __userService: UserService
+    ) { }
+
+    public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
+        return this.__use
