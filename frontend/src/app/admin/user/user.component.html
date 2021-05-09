@@ -7,4 +7,6 @@
             <div class="card-block">
                 <form role="form" #registerForm="ngForm" novalidate autocomplete="off" (ngSubmit)="register(registerForm)">
                     <div class="form-content">
-                        <div class="form-group" [ngClass]="{h
+                        <div class="form-group" [ngClass]="{has_success:(email.touched || email.dirty) && !email.errors || loading, has_danger: (email.touched || email.dirty) && email.errors || !loading}">
+                            <label for="inputEmail" class="form-control-label">E-mail</label>
+                   
