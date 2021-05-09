@@ -10,4 +10,6 @@
                         <div class="form-group" [ngClass]="{has_success:(email.touched || email.dirty) && !email.errors || loading, has_danger: (email.touched || email.dirty) && email.errors || !loading}">
                             <label for="inputEmail" class="form-control-label">E-mail</label>
                             <input type="text" class="form-control" id="inputEmail" required name="email" [(ngModel)]="user.name" #email="ngModel" (change)="onEmailChange()" pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" />
-                            <div class="help
+                            <div class="help-block help-block-danger" *ngIf="((email.touched || email.dirty) && email.errors) || !loading">
+                                <span *ngIf="email.errors && email.errors.required">Email - обязательное поле</span>
+                              
