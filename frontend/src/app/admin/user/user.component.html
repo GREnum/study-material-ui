@@ -15,4 +15,6 @@
                                 <span *ngIf="email.errors && email.errors.pattern">Некорректный формат Email</span>
                                 <span *ngIf="!loading">{{errorUserMsg}}</span>
                             </div>
-                            <p class="help-block">Не
+                            <p class="help-block">Необходимо указать e-mail контрагента из системы мой склад. По данному e-mail будет осуществляться синхронизация.</p>
+                        </div>
+                        <div class="form-group" [ngClass]="{has_success:(password.touched || passwo
