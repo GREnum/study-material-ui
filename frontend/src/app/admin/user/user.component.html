@@ -17,4 +17,6 @@
                             </div>
                             <p class="help-block">Необходимо указать e-mail контрагента из системы мой склад. По данному e-mail будет осуществляться синхронизация.</p>
                         </div>
-                        <div class="form-group" [ngClass]="{has_success:(password.touched || passwo
+                        <div class="form-group" [ngClass]="{has_success:(password.touched || password.dirty) && !password.errors, has_danger: (password.touched || password.dirty) && password.errors}">
+                            <label for="inputPassword" class="form-control-label">Пароль</label>
+                            <input type="password" 
