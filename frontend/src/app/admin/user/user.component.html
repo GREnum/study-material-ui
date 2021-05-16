@@ -19,4 +19,5 @@
                         </div>
                         <div class="form-group" [ngClass]="{has_success:(password.touched || password.dirty) && !password.errors, has_danger: (password.touched || password.dirty) && password.errors}">
                             <label for="inputPassword" class="form-control-label">Пароль</label>
-                            <input type="password" 
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Пароль" required name="password" [(ngModel)]="user.password" #password="ngModel" />
+                            <div class="help-block help-block-danger" *ngIf="(password.touched || password.dirty) && pa
