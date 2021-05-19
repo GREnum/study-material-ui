@@ -24,4 +24,6 @@
                                 <span *ngIf="password.errors.required">Пароль - обязательное поле</span>
                             </div>
                             <p class="help-block">Пароль для авторизации пользователя в системе</p>
-     
+                        </div>
+                        <div class="form-group" [ngClass]="{has_success:(currencyI.touched || currencyI.dirty) && !currencyI.errors, has_danger: (currencyI.touched || currencyI.dirty) && currencyI.errors}">
+                            <label for="currencyId" class=
