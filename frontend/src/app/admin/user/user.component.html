@@ -28,4 +28,8 @@
                         <div class="form-group" [ngClass]="{has_success:(currencyI.touched || currencyI.dirty) && !currencyI.errors, has_danger: (currencyI.touched || currencyI.dirty) && currencyI.errors}">
                             <label for="currencyId" class="form-control-label">Валюта</label>
                             <select id="currencyId" class="form-control" name="currencyId" [(ngModel)]="user.currencyId" required #currencyI="ngModel">
-                                    <option  *ngFor="let currency of
+                                    <option  *ngFor="let currency of allCurrency" [value]="currency.id">
+                                        {{currency.name}}
+                                    </option>
+                                </select>
+                            <div class="help-block help-block-danger" *ngIf="(currencyI.touched || currencyI
