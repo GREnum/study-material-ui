@@ -38,4 +38,8 @@
                             <div class="help-block">
                                 <span>Необходимо выбрать валюту, с которой будет работать клиент</span>
                                 <p>Если нужно отредактировать для существующего пользователя, нужно указать в БД идентификатор валюты для пользователя</p>
-                          
+                                <p *ngFor="let currency of allCurrency">"{{currency.name}}"->{{currency.id}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" type="submit" [disabled]="!registerForm.valid">Заре
