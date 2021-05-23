@@ -32,4 +32,8 @@
                                         {{currency.name}}
                                     </option>
                                 </select>
-                            <div class="help-block help-block-danger" *ngIf="(currencyI.touched || currencyI
+                            <div class="help-block help-block-danger" *ngIf="(currencyI.touched || currencyI.dirty) && currencyI.errors">
+                                <span *ngIf="currencyI.errors && currencyI.errors.required">Валюта - обязательное поле</span>
+                            </div>
+                            <div class="help-block">
+                   
