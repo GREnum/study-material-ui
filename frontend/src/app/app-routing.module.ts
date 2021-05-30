@@ -11,3 +11,8 @@ const routes: Routes = [
     { path: "not-found", loadChildren: "./_not-found/not-found.module#NotFoundModule" },
     { path: "**", redirectTo: "not-found" }
 ];
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutergModule { }
