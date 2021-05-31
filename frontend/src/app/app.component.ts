@@ -11,4 +11,7 @@ import { ToasterService } from "angular2-toaster";
 export class AppComponent {
     constructor(private _toasterServise: ToasterService) { }
     public popToast() {
-        this._toasterServise.pop(
+        this._toasterServise.pop("success", "Args Title", "Args Body");
+    }
+
+}
