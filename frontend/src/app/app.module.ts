@@ -8,4 +8,12 @@ import { ToasterModule } from "angular2-toaster";
 import { AuthGuard } from "./_auth/auth.guard";
 import { AuthService } from "./_auth/auth.service";
 import { AppComponent } from "./app.component";
-import { Toast
+import { ToasterComponent } from "./_toaster/toaster.component";
+import { AppRoutergModule } from "./app-routing.module";
+import { HttpInterceptorService } from "./_auth/http-interceptor.service";
+
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    HttpClie
