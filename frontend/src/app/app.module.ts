@@ -16,4 +16,20 @@ import { HttpInterceptorService } from "./_auth/http-interceptor.service";
 @NgModule({
   imports: [
     BrowserModule,
-    HttpClie
+    HttpClientModule,
+    AppRoutergModule,
+    BrowserAnimationsModule,
+    ToasterModule
+  ],
+  declarations: [
+    AppComponent,
+    ToasterComponent
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true,
+    },
+    AuthService,
+    HttpC
