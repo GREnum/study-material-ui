@@ -1,0 +1,29 @@
+
+<div class="login-page">
+    <div class="row">
+        <div class="col-md-4 push-md-4">
+            <img src="assets/images/logo.png" width="150px" class="user-avatar" />
+            <h1>Colors Of Papaya</h1>
+            <form role="form" (ngSubmit)="login()" #loginForm="ngForm" novalidate autocomplete="off">
+                <div class="form-content">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="E-mail" required [(ngModel)]="model.username" name="email" #username="ngModel">
+                        <div class="help-block" *ngIf="(username.touched || username.dirty) && username.errors">
+                            <span *ngIf="username.errors.required">Email is required.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Password" required [(ngModel)]="model.password" name="password" #password="ngModel" />
+                        <div class="help-block" *ngIf="(password.touched || password.dirty) && password.errors">
+                            <span *ngIf="password.errors.required">Password is required.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Log in </a> &nbsp; -->
+                <button class="btn rounded-btn" type="submit" [disabled]="!loginForm.valid">Вход</button>
+                <!-- <a class="btn rounded-btn" [routerLink]="['/signup']">Register</a> -->
+            </form>
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+        </div>
+    </div>
+</div>

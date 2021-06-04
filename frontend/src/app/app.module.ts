@@ -32,4 +32,8 @@ import { HttpInterceptorService } from "./_auth/http-interceptor.service";
       multi: true,
     },
     AuthService,
-    HttpC
+    HttpClient,
+    AuthGuard],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
