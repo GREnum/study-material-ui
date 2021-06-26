@@ -28,3 +28,21 @@
 
 .wh200 {
     width: 200px;
+}
+
+.img_pr {
+    min-height: 150px;
+    min-width: 101px;
+}
+
+.product-list {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #e6e6e6;
+}
+
+.product-list .row-wrap {
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    position: relati
