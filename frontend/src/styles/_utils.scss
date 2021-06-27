@@ -45,4 +45,17 @@
     display: table;
     width: 100%;
     overflow: hidden;
-    position: relati
+    position: relative;
+    border-collapse: separate;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 40px;
+}
+
+.product-list .row-wrap .product-description {
+    position: relative;
+}
+
+.product-list .row-wrap .product-description table {
+    width: 100%;
+    height: 100%;
+    margin: 0;
