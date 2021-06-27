@@ -59,3 +59,19 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    border-collapse: collapse;
+}
+
+.product-list .row-wrap .product-description table .img-table {
+    width: 110px;
+    height: 160px;
+    vertical-align: top;
+}
+
+.product-list .row-wrap .product-description table .img-table img {
+    height: auto;
+    max-width: 130px;
+    padding: 10px 10px 10px 0;
+}
+
+.pr
