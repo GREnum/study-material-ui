@@ -125,4 +125,18 @@
     background: #fff;
 }
 
-.product-list .total_
+.product-list .total_price_items .total_price .tp_number {
+    float: right;
+    padding: 0 5px;
+}
+
+.product-list .total_price_items .tp_prop_color {
+    color: #E7452C;
+}
+
+.product-list .description_items td {
+    padding: 10px 0 0 0;
+}
+
+.product-list .row-wrap .product-description table td {
+    bord
