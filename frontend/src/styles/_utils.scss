@@ -100,4 +100,17 @@
     vertical-align: top;
 }
 
-.product-list .total_
+.product-list .total_price_items {
+    vertical-align: bottom;
+}
+
+.product-list .total_price_items td {
+    padding-bottom: 10px;
+}
+
+.product-list .total_price_items .total_price {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 5px 0 0;
+   
