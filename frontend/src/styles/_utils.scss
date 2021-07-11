@@ -113,4 +113,16 @@
     float: left;
     width: 100%;
     padding: 5px 0 0;
-   
+    border-bottom: 1px dotted #c1c1c1;
+}
+
+.product-list .total_price_items .total_price .tp_item {
+    margin-top: 3px;
+    margin-bottom: -3px;
+    padding: 0 5px 0 0;
+    float: left;
+    font: 11pt Arial;
+    background: #fff;
+}
+
+.product-list .total_
