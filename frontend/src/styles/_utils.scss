@@ -151,4 +151,13 @@
     float: left;
 }
 
-.cl-size-container .cl
+.cl-size-container .cl-size div {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    text-align: center;
+    font: 16pt/36px Arial;
+    border: 1px solid #ededed;
+    border-top-color: rgb(237, 237, 237);
+    border-right-color: rgb(237, 237, 237);
+    bord
