@@ -195,4 +195,21 @@
     width: 210px;
 }
 
-.help-block 
+.help-block {
+    font-size: 0.8em;
+}
+
+.help-block-danger {
+    color: #d9534f
+}
+
+.logo-head span {
+    font-size: 12px;
+}
+
+.table_comment {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 220px;
+}
