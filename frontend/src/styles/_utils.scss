@@ -160,4 +160,13 @@
     border: 1px solid #ededed;
     border-top-color: rgb(237, 237, 237);
     border-right-color: rgb(237, 237, 237);
-    bord
+    border-bottom-color: rgb(237, 237, 237);
+    border-left-color: rgb(237, 237, 237);
+    margin: 2px 6px 0 0;
+    background-color: #fff;
+}
+
+.cl-size-container .cl-size div.cl-sizerow-plus,
+.cl-size-container .cl-size div.cl-sizerow-minus {
+    background-color: #f6f6f6;
+    border-color:
