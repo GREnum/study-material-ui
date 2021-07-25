@@ -169,4 +169,15 @@
 .cl-size-container .cl-size div.cl-sizerow-plus,
 .cl-size-container .cl-size div.cl-sizerow-minus {
     background-color: #f6f6f6;
-    border-color:
+    border-color: #fff;
+    cursor: pointer;
+}
+
+.loading-indicator {
+    display: block;
+    padding: 0 2rem;
+    position: fixed;
+    z-index: $zindex-navbar;
+    min-width: 57rem;
+    transition: transform .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transfo
