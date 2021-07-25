@@ -180,4 +180,19 @@
     z-index: $zindex-navbar;
     min-width: 57rem;
     transition: transform .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    transfo
+    transform: translatey(-20rem);
+}
+
+.loading-indicator.show_loader {
+    transform: translatey(0rem);
+}
+
+.loading-indicator .loader {
+    background-color: #222;
+    box-shadow: 0 0 20px -3px #000;
+    padding: 1rem;
+    color: #fff;
+    width: 210px;
+}
+
+.help-block 
