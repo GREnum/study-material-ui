@@ -23,4 +23,17 @@
 
 // Quick fix for badges in buttons
 .btn .badge {
-  position: 
+  position: relative;
+  top: -1px;
+}
+
+// scss-lint:disable QualifyingElement
+// Add hover effects, but only for links
+a.badge {
+  @include hover-focus {
+    color: $badge-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+// scss-lint:enable Q
