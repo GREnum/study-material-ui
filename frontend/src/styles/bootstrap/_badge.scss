@@ -50,4 +50,19 @@ a.badge {
 
 // Colors
 //
-// Cont
+// Contextual variations (linked badges get darker on :hover).
+
+.badge-default {
+  @include badge-variant($badge-default-bg);
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary-bg);
+}
+
+.badge-success {
+  @include badge-variant($badge-success-bg);
+}
+
+.badge-info {
+  @include bad
