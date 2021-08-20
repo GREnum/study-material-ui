@@ -65,4 +65,13 @@ a.badge {
 }
 
 .badge-info {
-  @include bad
+  @include badge-variant($badge-info-bg);
+}
+
+.badge-warning {
+  @include badge-variant($badge-warning-bg);
+}
+
+.badge-danger {
+  @include badge-variant($badge-danger-bg);
+}
