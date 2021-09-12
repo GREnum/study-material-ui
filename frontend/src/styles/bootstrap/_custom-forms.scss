@@ -1,0 +1,39 @@
+
+// scss-lint:disable PropertyCount
+
+// Embedded icons from Open Iconic.
+// Released under MIT and copyright 2014 Waybury.
+// https://useiconic.com/open
+
+
+// Checkboxes and radios
+//
+// Base class takes care of all the key behavioral aspects.
+
+.custom-control {
+  position: relative;
+  display: inline-flex;
+  min-height: (1rem * $line-height-base);
+  padding-left: $custom-control-gutter;
+  margin-right: $custom-control-spacer-x;
+  cursor: pointer;
+}
+
+.custom-control-input {
+  position: absolute;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  opacity: 0;
+
+  &:checked ~ .custom-control-indicator {
+    color: $custom-control-checked-indicator-color;
+    background-color: $custom-control-checked-indicator-bg;
+    @include box-shadow($custom-control-checked-indicator-box-shadow);
+  }
+
+  &:focus ~ .custom-control-indicator {
+    // the mixin is not used here to make sure there is feedback
+    box-shadow: $custom-control-focus-indicator-box-shadow;
+  }
+
+  &:active ~ .custom-control-indicator {
+    color: $custom-control-active-indicator-color;
