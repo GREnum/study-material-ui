@@ -1,4 +1,17 @@
 // The dropdown wrapper (`<div>`)
 .dropup,
 .dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  // Generate the caret automatically
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: $caret-width;
+    vertical-align: middle;
+    content: "";
+    border-top: $caret-width solid;
   
