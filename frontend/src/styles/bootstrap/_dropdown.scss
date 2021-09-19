@@ -14,4 +14,18 @@
     vertical-align: middle;
     content: "";
     border-top: $caret-width solid;
-  
+    border-right: $caret-width solid transparent;
+    border-left: $caret-width solid transparent;
+  }
+
+  // Prevent the focus on the dropdown toggle when closing dropdowns
+  &:focus {
+    outline: 0;
+  }
+}
+
+.dropup {
+  .dropdown-toggle {
+    &::after {
+      border-top: 0;
+      border-bottom: $caret-width sol
