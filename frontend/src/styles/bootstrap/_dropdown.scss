@@ -28,4 +28,19 @@
   .dropdown-toggle {
     &::after {
       border-top: 0;
-      border-bottom: $caret-width sol
+      border-bottom: $caret-width solid;
+    }
+  }
+}
+
+// The dropdown menu
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding-y 0;
+  margin: $dro
