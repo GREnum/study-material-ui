@@ -47,4 +47,12 @@
   font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
   color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  list-style: no
+  list-style: none;
+  background-color: $dropdown-bg;
+  background-clip: padding-box;
+  border: $dropdown-border-width solid $dropdown-border-color;
+  @include border-radius($border-radius);
+  @include box-shadow($dropdown-box-shadow);
+}
+
+// Dividers (basically an `<hr>`) within the
