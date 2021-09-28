@@ -55,4 +55,14 @@
   @include box-shadow($dropdown-box-shadow);
 }
 
-// Dividers (basically an `<hr>`) within the
+// Dividers (basically an `<hr>`) within the dropdown
+.dropdown-divider {
+  @include nav-divider($dropdown-divider-bg);
+}
+
+// Links, buttons, and more within the dropdown menu
+//
+// `<button>`-specific styles are denoted with `// For <button>s`
+.dropdown-item {
+  display: block;
+  width: 100%; // Fo
