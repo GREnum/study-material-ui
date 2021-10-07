@@ -72,4 +72,16 @@
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
-  background: none; //
+  background: none; // For `<button>`s
+  border: 0; // For `<button>`s
+
+  @include hover-focus {
+    color: $dropdown-link-hover-color;
+    text-decoration: none;
+    background-color: $dropdown-link-hover-bg;
+  }
+
+  &.active,
+  &:active {
+    color: $dropdown-link-active-color;
+    text-de
