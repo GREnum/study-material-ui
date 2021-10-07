@@ -84,4 +84,14 @@
   &.active,
   &:active {
     color: $dropdown-link-active-color;
-    text-de
+    text-decoration: none;
+    background-color: $dropdown-link-active-bg;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $dropdown-link-disabled-color;
+    cursor: $cursor-disabled;
+    background-color: transparent;
+    // Remove CSS gradients if they're enabled
+    @if 
