@@ -94,4 +94,21 @@
     cursor: $cursor-disabled;
     background-color: transparent;
     // Remove CSS gradients if they're enabled
-    @if 
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+}
+
+// Open state for the dropdown
+.show {
+  // Show the menu
+  > .dropdown-menu {
+    display: block;
+  }
+
+  // Remove the outline when :focus is triggered
+  > a {
+    outline: 0;
+  }
+}
