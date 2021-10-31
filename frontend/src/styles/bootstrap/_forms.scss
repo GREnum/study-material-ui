@@ -32,4 +32,10 @@
         background-color: transparent;
         border: 0;
     }
-    // Customize the `:focus` state to i
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus();
+    // Placeholder
+    &::placeholder {
+        color: $input-color-placeholder;
+        // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+        opacit
