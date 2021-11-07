@@ -52,4 +52,14 @@
         opacity: 1;
     }
     &:disabled {
-        cursor: $cursor-disable
+        cursor: $cursor-disabled;
+    }
+}
+
+select.form-control {
+    &:not([size]):not([multiple]) {
+        $select-border-width: ($border-width * 2);
+        height: calc(#{$input-height} + #{$select-border-width});
+    }
+    &:focus::-ms-value {
+        // Suppress the nest
