@@ -62,4 +62,7 @@ select.form-control {
         height: calc(#{$input-height} + #{$select-border-width});
     }
     &:focus::-ms-value {
-        // Suppress the nest
+        // Suppress the nested default white text on blue background highlight given to
+        // the selected option text when the (still closed) <select> receives focus
+        // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+        // match
