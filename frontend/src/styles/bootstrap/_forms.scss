@@ -91,4 +91,11 @@ select.form-control {
 
 .col-form-label-lg {
     padding-top: calc(#{$input-padding-y-lg} - #{$input-btn-border-width} * 2);
-    padding-bottom: calc(#{$i
+    padding-bottom: calc(#{$input-padding-y-lg} - #{$input-btn-border-width} * 2);
+    font-size: $font-size-lg;
+}
+
+.col-form-label-sm {
+    padding-top: calc(#{$input-padding-y-sm} - #{$input-btn-border-width} * 2);
+    padding-bottom: calc(#{$input-padding-y-sm} - #{$input-btn-border-width} * 2);
+    font-size: $
