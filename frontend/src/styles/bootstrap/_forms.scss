@@ -74,4 +74,15 @@ select.form-control {
 
 // Make file inputs better match text inputs by forcing them to new lines.
 .form-control-file,
-.form-co
+.form-control-range {
+    display: block;
+}
+
+//
+// Labels
+//
+// For use with horizontal and inline forms, when you need the label text to
+// align with the form controls.
+.col-form-label {
+    padding-top: calc(#{$input-padding-y} - #{$input-btn-border-width} * 2);
+    padding-bott
