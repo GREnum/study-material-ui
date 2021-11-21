@@ -108,4 +108,13 @@ select.form-control {
 // be the same size as regular labels, and to align with the form controls.
 .col-form-legend {
     padding-top: $input-padding-y;
-    padding-b
+    padding-bottom: $input-padding-y;
+    margin-bottom: 0;
+    font-size: $font-size-base;
+}
+
+// Static form control text
+//
+// Apply class to an element to make any string of text align with labels in a
+// horizontal form layout.
+.form-control-stat
