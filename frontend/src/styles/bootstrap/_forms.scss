@@ -124,4 +124,16 @@ select.form-control {
     line-height: $input-line-height;
     border: solid transparent;
     border-width: $input-btn-border-width 0;
-    &.for
+    &.form-control-sm,
+    &.form-control-lg {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// Form control sizing
+//
+// Build on `.form-control` with modifier classes to decrease or increase the
+// height and font-size of form controls.
+//
+// The `.
