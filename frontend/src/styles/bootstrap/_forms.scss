@@ -140,4 +140,16 @@ select.form-control {
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 .form-control-sm {
     padding: $input-padding-y-sm $input-padding-x-sm;
-    font-size: $font-si
+    font-size: $font-size-sm;
+    @include border-radius($input-border-radius-sm);
+}
+
+select.form-control-sm {
+    &:not([size]):not([multiple]) {
+        height: $input-height-sm;
+    }
+}
+
+.form-control-lg {
+    padding: $input-padding-y-lg $input-padding-x-lg;
+    font-size: 
