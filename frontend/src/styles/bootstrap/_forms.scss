@@ -136,4 +136,8 @@ select.form-control {
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 //
-// The `.
+// The `.form-group-* form-control` variations are sadly duplicated to avoid the
+// issue documented in https://github.com/twbs/bootstrap/issues/15074.
+.form-control-sm {
+    padding: $input-padding-y-sm $input-padding-x-sm;
+    font-size: $font-si
