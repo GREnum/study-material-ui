@@ -165,4 +165,16 @@ select.form-control-lg {
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
-// horizontal forms, u
+// horizontal forms, use the predefined grid classes.
+.form-group {
+    margin-bottom: $form-group-margin-bottom;
+}
+
+.form-text {
+    display: block;
+    margin-top: $form-text-margin-top;
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as han
