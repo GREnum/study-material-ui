@@ -199,4 +199,17 @@ select.form-control-lg {
 .form-check-input {
     position: absolute;
     margin-top: $form-check-input-margin-y;
-    margin-left: -$f
+    margin-left: -$form-check-input-gutter;
+    &:only-child {
+        position: static;
+    }
+}
+
+// Radios and checkboxes on same line
+.form-check-inline {
+    display: inline-block;
+    .form-check-label {
+        vertical-align: middle;
+    }
+    +.form-check-inline {
+        m
