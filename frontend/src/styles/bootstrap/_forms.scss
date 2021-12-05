@@ -233,4 +233,14 @@ select.form-control-lg {
 }
 
 // Form validation states
-.has_success
+.has_success {
+    @include form-control-validation($brand-success);
+    .form_control_success {
+        background-image: $form-icon-success;
+    }
+}
+
+.has_warning {
+    @include form-control-validation($brand-warning);
+    .form_control_warning {
+        background-ima
