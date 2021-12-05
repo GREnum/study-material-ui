@@ -212,4 +212,16 @@ select.form-control-lg {
         vertical-align: middle;
     }
     +.form-check-inline {
-        m
+        margin-left: $form-check-inline-margin-x;
+    }
+}
+
+// Form control feedback states
+//
+// Apply contextual and semantic states to individual form controls.
+.form-control-feedback {
+    margin-top: $form-feedback-margin-top;
+}
+
+.form_control_success,
+.form_c
