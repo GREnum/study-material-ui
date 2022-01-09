@@ -283,4 +283,12 @@ select.form-control-lg {
         // Inline-block all the things for "inline"
         .form-group {
             display: flex;
-            flex: 0 0 
+            flex: 0 0 auto;
+            flex-flow: row wrap;
+            align-items: center;
+            margin-bottom: 0;
+        }
+        // Allow folks to *not* use `.form-group`
+        .form-control {
+            display: inline-block;
+            
