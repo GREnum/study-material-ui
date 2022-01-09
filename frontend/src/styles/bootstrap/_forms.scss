@@ -298,4 +298,12 @@ select.form-control-lg {
         .form-control-static {
             display: inline-block;
         }
-  
+        .input-group {
+            width: auto;
+        }
+        .form-control-label {
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        // Remove default margin on radios/checkboxes that were used for stacking, and
+        // then undo 
