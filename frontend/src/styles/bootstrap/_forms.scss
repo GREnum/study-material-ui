@@ -333,4 +333,8 @@ select.form-control-lg {
         }
         .custom-control-indicator {
             position: static;
- 
+            display: inline-block;
+            margin-right: $form-check-input-margin-x; // Flexbox alignment means we lose our HTML space here, so we compensate.
+            vertical-align: text-bottom;
+        }
+        // Re-override the feedback i
