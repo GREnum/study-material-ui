@@ -337,4 +337,9 @@ select.form-control-lg {
             margin-right: $form-check-input-margin-x; // Flexbox alignment means we lose our HTML space here, so we compensate.
             vertical-align: text-bottom;
         }
-        // Re-override the feedback i
+        // Re-override the feedback icon.
+        .has-feedback .form-control-feedback {
+            top: 0;
+        }
+    }
+}
