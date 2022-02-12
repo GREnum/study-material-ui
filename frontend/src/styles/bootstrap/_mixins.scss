@@ -11,4 +11,19 @@
 @mixin transition($transition...) {
   @if $enable-transitions {
     @if length($transition) == 0 {
-      transition: $transition-b
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+}
+
+// Utilities
+@import "mixins/breakpoints";
+@import "mixins/hover";
+@import "mixins/image";
+@import "mixins/badge";
+@import "mixins/resize";
+@import "mixins/screen-reader";
+@import "mixins/size";
+@imp
