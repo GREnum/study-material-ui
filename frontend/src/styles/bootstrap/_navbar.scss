@@ -18,4 +18,17 @@
 .navbar {
   position: relative;
   display: flex;
-  flex-d
+  flex-direction: column;
+  padding: $navbar-padding-y $navbar-padding-x;
+}
+
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: $navbar-padding-x;
