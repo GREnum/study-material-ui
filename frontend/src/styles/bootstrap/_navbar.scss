@@ -32,3 +32,18 @@
   padding-top: .25rem;
   padding-bottom: .25rem;
   margin-right: $navbar-padding-x;
+  font-size: $font-size-lg;
+  line-height: inherit;
+  white-space: nowrap;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+}
+
+
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar
