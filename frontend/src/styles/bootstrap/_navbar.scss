@@ -107,4 +107,15 @@
 // item and allow easy placement.
 .navbar-toggler-left {
   position: absolute;
-  lef
+  left: $navbar-padding-x;
+}
+.navbar-toggler-right {
+  position: absolute;
+  right: $navbar-padding-x;
+}
+
+// Generate series of `.navbar-toggleable-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-toggleable {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $nex
