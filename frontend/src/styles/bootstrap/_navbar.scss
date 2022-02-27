@@ -97,4 +97,14 @@
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
-  vertical-al
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+// Use `position` on the toggler to prevent it from being auto placed as a flex
+// item and allow easy placement.
+.navbar-toggler-left {
+  position: absolute;
+  lef
