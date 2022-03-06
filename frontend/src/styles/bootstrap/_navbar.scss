@@ -139,3 +139,16 @@
       @include media-breakpoint-up($next) {
         flex-direction: row;
         flex-wrap: nowrap;
+        align-items: center;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .nav-link {
+            padding-right: .5rem;
+            padding-left: .5rem;
+          }
+        }
+
+        // For nesting containers, have to redeclare for alignment purposes
+  
