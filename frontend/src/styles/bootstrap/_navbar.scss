@@ -162,3 +162,17 @@
           display: flex !important;
           width: 100%;
         }
+        // scss-lint:enable ImportantRule
+
+        .navbar-toggler {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+// Navbar themes
+//
+// Styles for switching between navbars with light or dark background.
