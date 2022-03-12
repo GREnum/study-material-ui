@@ -151,4 +151,14 @@
         }
 
         // For nesting containers, have to redeclare for alignment purposes
-  
+        > .container {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+        }
+
+        // scss-lint:disable ImportantRule
+        .navbar-collapse {
+          display: flex !important;
+          width: 100%;
+        }
