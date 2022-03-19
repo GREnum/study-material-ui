@@ -203,4 +203,16 @@
 
     .open > .nav-link,
     .active > .nav-link,
-    .nav-link.o
+    .nav-link.open,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $navbar-light-toggler-border;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-light-toggler-bg;
+ 
