@@ -215,4 +215,18 @@
 
   .navbar-toggler-icon {
     background-image: $navbar-light-toggler-bg;
- 
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+  }
+}
+
+// White links against a dark background
+.navbar-inverse {
+  .navbar-brand,
+  .navbar-toggler {
+    color: $navbar-inverse-active-color;
+
+    @include hover-focus {
+      color: $navbar-inverse-active-colo
