@@ -229,4 +229,19 @@
     color: $navbar-inverse-active-color;
 
     @include hover-focus {
-      color: $navbar-inverse-active-colo
+      color: $navbar-inverse-active-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-inverse-color;
+
+      @include hover-focus {
+        color: $navbar-inverse-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-inverse-disabled-color;
+      }
+  
