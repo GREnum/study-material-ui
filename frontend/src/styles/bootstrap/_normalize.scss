@@ -12,4 +12,18 @@
 
 html {
   font-family: sans-serif; // 1
-  line-he
+  line-height: 1.15; // 2
+  -ms-text-size-adjust: 100%; // 3
+  -webkit-text-size-adjust: 100%; // 3
+}
+
+// Sections
+// ==========================================================================
+
+//
+// Remove the margin in all browsers (opinionated).
+//
+
+body {
+  margin: 0;
+}
