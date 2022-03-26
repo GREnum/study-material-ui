@@ -244,4 +244,18 @@
       &.disabled {
         color: $navbar-inverse-disabled-color;
       }
-  
+    }
+
+    .open > .nav-link,
+    .active > .nav-link,
+    .nav-link.open,
+    .nav-link.active {
+      color: $navbar-inverse-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $navbar-inverse-toggler-border;
+  }
+
+  .navbar-toggler-icon
