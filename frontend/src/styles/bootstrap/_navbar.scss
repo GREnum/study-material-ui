@@ -258,4 +258,11 @@
     border-color: $navbar-inverse-toggler-border;
   }
 
-  .navbar-toggler-icon
+  .navbar-toggler-icon {
+    background-image: $navbar-inverse-toggler-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-inverse-color;
+  }
+}
