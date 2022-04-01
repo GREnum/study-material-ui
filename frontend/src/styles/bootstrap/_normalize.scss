@@ -46,3 +46,19 @@ section {
 // `article` contexts in Chrome, Firefox, and Safari.
 //
 
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+// Grouping content
+// ==========================================================================
+
+//
+// Add the correct display in IE 9-.
+// 1. Add the correct display in IE.
+//
+
+figcaption,
+figure,
+main 
