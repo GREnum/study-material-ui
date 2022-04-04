@@ -61,4 +61,24 @@ h1 {
 
 figcaption,
 figure,
-main 
+main { // 1
+  display: block;
+}
+
+//
+// Add the correct margin in IE 8.
+//
+
+figure {
+  margin: 1em 40px;
+}
+
+//
+// 1. Add the correct box sizing in Firefox.
+// 2. Show the overflow in Edge and IE.
+//
+
+hr {
+  box-sizing: content-box; // 1
+  height: 0; // 1
+  overflow: visible; //
