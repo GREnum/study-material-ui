@@ -151,4 +151,24 @@ strong {
 // 2. Correct the odd `em` font sizing in all browsers.
 //
 
-cod
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; // 1
+  font-size: 1em; // 2
+}
+
+//
+// Add the correct font style in Android 4.3-.
+//
+
+dfn {
+  font-style: italic;
+}
+
+//
+// Add the correct background and color in IE 9-.
+//
+
+mark {
+  background-color: #ff0;
