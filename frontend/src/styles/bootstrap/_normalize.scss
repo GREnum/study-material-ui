@@ -193,4 +193,28 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// Embedded content
+// ==========================================================================
+
+//
+// Add the correct display in IE 9-.
+//
+
+audio,
+video {
+  display: inline-block;
+}
+
+//
+// A
