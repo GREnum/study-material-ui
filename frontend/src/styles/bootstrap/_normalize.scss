@@ -238,4 +238,20 @@ img {
 //
 
 svg:not(:root) {
-  overflow
+  overflow: hidden;
+}
+
+// Forms
+// ==========================================================================
+
+//
+// 1. Change the font styles in all browsers (opinionated).
+// 2. Remove the margin in Firefox and Safari.
+//
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; 
