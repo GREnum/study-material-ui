@@ -271,4 +271,16 @@ input { // 1
 }
 
 //
-// Remove the inheritance of text transform in Edge, Fi
+// Remove the inheritance of text transform in Edge, Firefox, and IE.
+// 1. Remove the inheritance of text transform in Firefox.
+//
+
+button,
+select { // 1
+  text-transform: none;
+}
+
+//
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inab
