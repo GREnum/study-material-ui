@@ -333,4 +333,15 @@ fieldset {
 //    `fieldset` elements in all browsers.
 //
 
-le
+legend {
+  box-sizing: border-box; // 1
+  color: inherit; // 2
+  display: table; // 1
+  max-width: 100%; // 1
+  padding: 0; // 3
+  white-space: normal; // 1
+}
+
+//
+// 1. Add the correct display in IE 9-.
+// 2. Add the correct vertical alignment in Chrome, Firefox, and Ope
