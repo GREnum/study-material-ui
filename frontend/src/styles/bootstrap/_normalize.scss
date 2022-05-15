@@ -365,4 +365,16 @@ textarea {
 // 2. Remove the padding in IE 10-.
 //
 
-[type="c
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; // 1
+  padding: 0; // 2
+}
+
+//
+// Correct the cursor style of increment and decrement buttons in Chrome.
+//
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  he
