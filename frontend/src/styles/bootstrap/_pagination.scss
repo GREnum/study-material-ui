@@ -8,4 +8,18 @@
 
 .page-item {
   &:first-child {
-    .page-lin
+    .page-link {
+      margin-left: 0;
+      @include border-left-radius($border-radius);
+    }
+  }
+  &:last-child {
+    .page-link {
+      @include border-right-radius($border-radius);
+    }
+  }
+
+  &.active .page-link {
+    z-index: 2;
+    color: $pagination-active-color;
+    backgrou
