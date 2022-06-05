@@ -25,4 +25,15 @@
       //color: #000 !important; // Black prints faster:
                                 //   http://www.sanbeiji.com/archives/953
       text-shadow: none !important;
-    
+      //background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+    // Bootstrap specific; comment the following selector out
+    //a[href]::after {
+    //  con
