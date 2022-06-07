@@ -36,4 +36,14 @@
 
     // Bootstrap specific; comment the following selector out
     //a[href]::after {
-    //  con
+    //  content: " (" attr(href) ")";
+    //}
+
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+
+    // Bootstrap specific; comment the following selector out
+    //
+    // Don't show links that are fragment identifiers,
+    // or use the `javascrip
