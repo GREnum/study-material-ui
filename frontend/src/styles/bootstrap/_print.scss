@@ -46,4 +46,17 @@
     // Bootstrap specific; comment the following selector out
     //
     // Don't show links that are fragment identifiers,
-    // or use the `javascrip
+    // or use the `javascript:` pseudo protocol
+    //
+
+    //a[href^="#"]::after,
+    //a[href^="javascript:"]::after {
+    // content: "";
+    //}
+
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+      border: $border-width solid #999;   // Bootstrap custom code; using `$bord
