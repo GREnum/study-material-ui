@@ -74,4 +74,26 @@
 
     tr,
     img {
-      page-break-in
+      page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+
+    // Bootstrap specific changes start
+
+    // Bootstrap components
+    .navbar {
+      display: none;
+    }
+    .badge {
+      border: $border-w
