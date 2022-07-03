@@ -1,0 +1,10 @@
+// Progress animations
+@keyframes progress-bar-stripes {
+  from { background-position: $progress-height 0; }
+  to { background-position: 0 0; }
+}
+
+// Basic progress bar
+.progress {
+  display: flex;
+  overflow: hidden; // force roun
