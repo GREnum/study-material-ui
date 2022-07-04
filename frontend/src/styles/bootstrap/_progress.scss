@@ -16,4 +16,16 @@
 }
 .progress-bar {
   height: $progress-height;
-  color: $
+  color: $progress-bar-color;
+  background-color: $progress-bar-bg;
+}
+
+// Striped
+.progress-bar-striped {
+  @include gradient-striped();
+  background-size: $progress-height $progress-height;
+}
+
+// Animated
+.progress-bar-animated {
+  animation: progress-bar-stripes $progress-bar
