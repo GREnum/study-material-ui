@@ -41,4 +41,12 @@
 
 .embed-responsive-4by3 {
   &::before {
-    paddin
+    padding-top: percentage(3 / 4);
+  }
+}
+
+.embed-responsive-1by1 {
+  &::before {
+    padding-top: percentage(1 / 1);
+  }
+}
