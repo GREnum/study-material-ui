@@ -6,3 +6,6 @@
   &[href] {
     @include hover-focus {
       background-color: darken($color, 10%);
+    }
+  }
+}
