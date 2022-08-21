@@ -11,3 +11,14 @@
   background-color: $background;
   border-color: $border;
   @include box-shadow($btn-box-shadow);
+
+  // Hover and focus styles are shared
+  @include hover {
+    color: $color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadow
