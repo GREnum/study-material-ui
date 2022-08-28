@@ -1,0 +1,14 @@
+// Card variants
+
+@mixin card-variant($background, $border) {
+  background-color: $background;
+  border-color: $border;
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+  }
+}
+
+@mixin card-outline-variant($color) {
+  backg
