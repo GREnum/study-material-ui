@@ -54,4 +54,8 @@
 
 // Form control sizing
 //
-// Rela
+// Relative text size, padding, and border-radii changes for form controls. For
+// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
+// element gets special love because it's special, and that's a fact!
+
+@mixin input-size($parent, $inp
