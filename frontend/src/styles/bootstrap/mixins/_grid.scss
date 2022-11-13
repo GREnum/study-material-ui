@@ -81,4 +81,12 @@
 }
 
 @mixin make-col-push($size, $columns: $grid-columns) {
-  left: if($si
+  left: if($size > 0, percentage($size / $columns), auto);
+}
+
+@mixin make-col-pull($size, $columns: $grid-columns) {
+  right: if($size > 0, percentage($size / $columns), auto);
+}
+
+@mixin make-col-modifier($type, $size, $columns) {
+  // Work around the lack of dynamic mixin @include 
