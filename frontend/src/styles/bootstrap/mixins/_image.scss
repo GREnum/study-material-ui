@@ -18,4 +18,11 @@
 
 // Retina image
 //
-// Short retina mixin for setting backgro
+// Short retina mixin for setting background-image and -size.
+
+@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
+  background-image: url($file-1x);
+
+  // Autoprefixer takes care of adding -webkit-min-device-pixel-ratio and -o-min-device-pixel-ratio,
+  // but doesn't convert dppx=>dpi.
+  // There's no such thing a
