@@ -17,4 +17,12 @@
     @include hover-focus {
       color: $color;
       background-color: darken($background, 5%);
-   
+    }
+
+    &.active {
+      color: #fff;
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+}
