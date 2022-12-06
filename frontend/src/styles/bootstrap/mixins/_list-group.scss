@@ -3,4 +3,18 @@
 @mixin list-group-item-variant($state, $background, $color) {
   .list-group-item-#{$state} {
     color: $color;
-    background-color: $back
+    background-color: $background;
+  }
+
+  a.list-group-item-#{$state},
+  button.list-group-item-#{$state} {
+    color: $color;
+
+    .list-group-item-heading {
+      color: inherit;
+    }
+
+    @include hover-focus {
+      color: $color;
+      background-color: darken($background, 5%);
+   
