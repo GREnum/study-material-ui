@@ -14,4 +14,8 @@
     }
     &:last-child {
       .page-link {
-        @include border-right-radius($border-rad
+        @include border-right-radius($border-radius);
+      }
+    }
+  }
+}
