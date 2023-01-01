@@ -18,4 +18,13 @@
 
     .table-#{$state} {
       @include hover {
-        background-color: $hove
+        background-color: $hover-background;
+
+        > td,
+        > th {
+          background-color: $hover-background;
+        }
+      }
+    }
+  }
+}
