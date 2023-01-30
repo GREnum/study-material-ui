@@ -16,4 +16,8 @@
     .flex#{$infix}-column-reverse { flex-direction: column-reverse !important; }
 
     .flex#{$infix}-wrap         { flex-wrap: wrap !important; }
-    .flex#{$infix}-nowrap       { flex-wrap:
+    .flex#{$infix}-nowrap       { flex-wrap: nowrap !important; }
+    .flex#{$infix}-wrap-reverse { flex-wrap: wrap-reverse !important; }
+
+    .justify-content#{$infix}-start   { justify-content: flex-start !important; }
+    .justify-content#{$infix}-end     { justify-content: flex-end !impo
