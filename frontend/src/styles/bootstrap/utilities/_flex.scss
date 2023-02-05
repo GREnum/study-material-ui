@@ -20,4 +20,9 @@
     .flex#{$infix}-wrap-reverse { flex-wrap: wrap-reverse !important; }
 
     .justify-content#{$infix}-start   { justify-content: flex-start !important; }
-    .justify-content#{$infix}-end     { justify-content: flex-end !impo
+    .justify-content#{$infix}-end     { justify-content: flex-end !important; }
+    .justify-content#{$infix}-center  { justify-content: center !important; }
+    .justify-content#{$infix}-between { justify-content: space-between !important; }
+    .justify-content#{$infix}-around  { justify-content: space-around !important; }
+
+    .align-items#{$infi
