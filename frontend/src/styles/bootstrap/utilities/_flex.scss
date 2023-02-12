@@ -25,4 +25,7 @@
     .justify-content#{$infix}-between { justify-content: space-between !important; }
     .justify-content#{$infix}-around  { justify-content: space-around !important; }
 
-    .align-items#{$infi
+    .align-items#{$infix}-start    { align-items: flex-start !important; }
+    .align-items#{$infix}-end      { align-items: flex-end !important; }
+    .align-items#{$infix}-center   { align-items: center !important; }
+    .align-items#{$infix}-baseline { a
