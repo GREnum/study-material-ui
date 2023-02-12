@@ -28,4 +28,9 @@
     .align-items#{$infix}-start    { align-items: flex-start !important; }
     .align-items#{$infix}-end      { align-items: flex-end !important; }
     .align-items#{$infix}-center   { align-items: center !important; }
-    .align-items#{$infix}-baseline { a
+    .align-items#{$infix}-baseline { align-items: baseline !important; }
+    .align-items#{$infix}-stretch  { align-items: stretch !important; }
+
+    .align-content#{$infix}-start   { align-content: flex-start !important; }
+    .align-content#{$infix}-end     { align-content: flex-end !important; }
+    
