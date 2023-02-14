@@ -33,4 +33,7 @@
 
     .align-content#{$infix}-start   { align-content: flex-start !important; }
     .align-content#{$infix}-end     { align-content: flex-end !important; }
-    
+    .align-content#{$infix}-center  { align-content: center !important; }
+    .align-content#{$infix}-between { align-content: space-between !important; }
+    .align-content#{$infix}-around  { align-content: space-around !important; }
+    .align-content#{$infix}-stretch { a
