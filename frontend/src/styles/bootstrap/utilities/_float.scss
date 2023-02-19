@@ -5,3 +5,5 @@
     .float#{$infix}-left  { @include float-left; }
     .float#{$infix}-right { @include float-right; }
     .float#{$infix}-none  { @include float-none; }
+  }
+}
