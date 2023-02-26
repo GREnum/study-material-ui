@@ -12,4 +12,8 @@
         .#{$abbrev}#{$infix}-#{$size}  { #{$prop}:        $length-y $length-x !important; }
         .#{$abbrev}t#{$infix}-#{$size} { #{$prop}-top:    $length-y !important; }
         .#{$abbrev}r#{$infix}-#{$size} { #{$prop}-right:  $length-x !important; }
-        .#{$abbrev
+        .#{$abbrev}b#{$infix}-#{$size} { #{$prop}-bottom: $length-y !important; }
+        .#{$abbrev}l#{$infix}-#{$size} { #{$prop}-left:   $length-x !important; }
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length-x !important;
+          #{$prop}-left:  $length-x !important
