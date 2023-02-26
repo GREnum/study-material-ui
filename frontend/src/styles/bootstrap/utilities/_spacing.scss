@@ -9,4 +9,7 @@
         $length-x: map-get($lengths, x);
         $length-y: map-get($lengths, y);
 
-        .#{$abbr
+        .#{$abbrev}#{$infix}-#{$size}  { #{$prop}:        $length-y $length-x !important; }
+        .#{$abbrev}t#{$infix}-#{$size} { #{$prop}-top:    $length-y !important; }
+        .#{$abbrev}r#{$infix}-#{$size} { #{$prop}-right:  $length-x !important; }
+        .#{$abbrev
