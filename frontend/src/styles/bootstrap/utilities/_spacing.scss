@@ -16,4 +16,14 @@
         .#{$abbrev}l#{$infix}-#{$size} { #{$prop}-left:   $length-x !important; }
         .#{$abbrev}x#{$infix}-#{$size} {
           #{$prop}-right: $length-x !important;
-          #{$prop}-left:  $length-x !important
+          #{$prop}-left:  $length-x !important;
+        }
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top:    $length-y !important;
+          #{$prop}-bottom: $length-y !important;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto  { margin:        auto !important
