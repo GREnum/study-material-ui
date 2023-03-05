@@ -4,4 +4,12 @@
 
 // Alignment
 
-.text-justify  { text-alig
+.text-justify  { text-align: justify !important; }
+.text-nowrap   { white-space: nowrap !important; }
+.text-truncate { @include text-truncate; }
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: b
