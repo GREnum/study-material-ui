@@ -32,4 +32,12 @@
     .mb#{$infix}-auto { margin-bottom: auto !important; }
     .ml#{$infix}-auto { margin-left:   auto !important; }
     .mx#{$infix}-auto {
-      m
+      margin-right: auto !important;
+      margin-left:  auto !important;
+    }
+    .my#{$infix}-auto {
+      margin-top:    auto !important;
+      margin-bottom: auto !important;
+    }
+  }
+}
