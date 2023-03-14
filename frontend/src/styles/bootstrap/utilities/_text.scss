@@ -52,4 +52,10 @@
 
 // Font color
 
-@inclu
+@include text-emphasis-variant('.text-gray-dark', $gray-dark);
+
+// Misc
+
+.text-hide {
+  @include text-hide();
+}
