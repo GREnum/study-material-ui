@@ -25,4 +25,15 @@
     "exclude": [
         "node_modules/*",
         "dist/*",
-        "dist-serve/*"
+        "dist-serve/*",
+        "node/*",
+        "**/*.spec.ts"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "forkChecker": true,
+        "useWebpackText": true,
+        "useCache": true
+    },
+    "angularCompilerOptions": {
+        "genDir": ".",
+        "skipMetad
