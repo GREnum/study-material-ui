@@ -12,4 +12,17 @@
         "suppressImplicitAnyIndexErrors": true,
         "skipLibCheck": true,
         "lib": ["es6", "dom"],
-        "outDir": "./di
+        "outDir": "./dist/",
+        "typeRoots": [
+            "./node_modules/@types/"
+        ]
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules/*",
+        "dist/*",
+        "dist-serve/*"
