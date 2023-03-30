@@ -40,4 +40,12 @@
             "debug",
             "info",
             "time",
-    
+            "timeEnd",
+            "trace"
+        ],
+        "no-construct": true,
+        "no-debugger": true,
+        "no-duplicate-variable": true,
+        "no-eval": true,
+        "no-inferrable-types": false,
+        "no-internal-module": tru
