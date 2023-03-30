@@ -21,4 +21,12 @@
         ],
         "interface-name": false,
         "jsdoc-format": true,
-        "label-
+        "label-position": true,
+        "max-line-length": false,
+        "member-access": true,
+        "member-ordering": [
+            true,
+            "public-before-private",
+            "static-before-instance",
+            "variables-before-functions"
+        
