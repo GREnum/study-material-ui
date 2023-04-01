@@ -75,4 +75,14 @@
         ],
         "radix": true,
         "semicolon": true,
-        "swi
+        "switch-default": true,
+        "trailing-comma": false,
+        "triple-equals": [
+            false
+        ],
+        "typedef": false,
+        "typedef-whitespace": [
+            true,
+            {
+                "call-signature": "nospace",
+                "
