@@ -55,4 +55,12 @@
         "no-string-literal": false,
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": true,
-        "no-unused-expres
+        "no-unused-expression": [
+            true,
+            "allow-fast-null-checks"
+        ],
+        "no-use-before-declare": true,
+        "no-var-keyword": true,
+        "no-var-requires": false,
+        "object-literal-sort-keys": false,
+        "one-line"
