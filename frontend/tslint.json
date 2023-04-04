@@ -85,4 +85,13 @@
             true,
             {
                 "call-signature": "nospace",
-                "
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            }
+        ],
+        "variable-name": [
+            true,
+            "check-format",
+            "allo
