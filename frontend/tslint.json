@@ -94,4 +94,17 @@
         "variable-name": [
             true,
             "check-format",
-            "allo
+            "allow-leading-underscore",
+            "allow-pascal-case",
+            "ban-keywords"
+        ],
+        "whitespace": [
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-separator",
+            "check-type"
+        ]
+    }
+}
